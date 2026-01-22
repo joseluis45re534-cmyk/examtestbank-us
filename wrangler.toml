@@ -5,6 +5,4 @@ pages_build_output_dir = "dist"
 [vars]
 # NODE_ENV = "production" # Optional
 
-[[kv_namespaces]]
-# binding = "SESSION_KV"
-# id = "xxxxx"
+
