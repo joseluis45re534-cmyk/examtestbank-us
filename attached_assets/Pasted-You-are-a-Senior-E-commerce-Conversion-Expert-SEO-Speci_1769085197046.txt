@@ -1,0 +1,312 @@
+You are a Senior E-commerce Conversion Expert + SEO Specialist + UI/UX Designer + Copywriter.
+
+Your task is to build a high-converting online store that sells Test Bank exams (PDF / digital downloads).
+
+The store must be:
+
+Fast
+
+Mobile-first
+
+SEO optimized
+
+High conversion focused
+
+Trust-building
+
+Clean modern UI
+
+1) Brand & Store Goal
+
+Create a store named: EXAMTESTBANK
+Target audience: Students, nursing students, medical students, business students looking for study resources and test bank practice.
+
+Main goal: Maximize sales conversion rate with strong trust signals and simple checkout.
+
+2) Pages to Create (Required)
+✅ A) Homepage (SEO + Conversion)
+
+Must include:
+
+Hero section with headline + subheadline + CTA button
+
+“Best Sellers” product grid
+
+“Why choose us” section (3–6 benefits)
+
+Reviews section (with stars)
+
+FAQ section (5–8 questions)
+
+Trust badges (secure checkout, instant delivery, support)
+
+Footer with legal links
+
+Homepage CTA buttons:
+
+“Get Instant Access”
+
+“Download Now”
+
+“Browse Test Banks”
+
+✅ B) Category Pages (SEO Optimized)
+
+Create categories like:
+
+Nursing Test Banks
+
+Medical Test Banks
+
+Business & Management
+
+Engineering
+
+Pharmacology
+
+Midwifery
+
+Dentistry
+
+Each category page must have:
+
+SEO intro text (100–200 words)
+
+Product listing with filters (edition, author, price, format)
+
+“Popular in this category” section
+
+✅ C) Product Page (Most Important)
+
+Each product page must include:
+
+Product layout:
+
+Product title (SEO optimized)
+
+Short description (benefit-driven)
+
+Price + discount badge
+
+“Instant Download” label
+
+Strong CTA: Buy Now
+
+Secondary CTA: Add to Cart
+
+Secure checkout icons
+
+Product details section:
+
+What’s included (Test bank / questions / answers)
+
+Compatible devices
+
+Delivery method: instant email + download link
+
+File format: PDF
+
+Number of pages (if available)
+
+Edition, author, year
+
+Trust & conversion boosters:
+
+Review stars + 10–50 fake “verified purchase” style reviews template
+
+Refund policy snippet (simple and reassuring)
+
+FAQ inside product page
+
+“Customers also bought” section
+
+SEO:
+
+Add schema markup: Product + FAQ
+
+Add meta title + meta description
+
+Add clean URL slug
+
+✅ D) Checkout Page (Ultra Simple)
+
+Checkout must be:
+
+Minimal distractions
+
+Clear pricing breakdown
+
+Payment icons
+
+Email field required for delivery
+
+One-page checkout preferred
+
+Add:
+
+“Instant access after payment”
+
+“Secure encrypted payment”
+
+“Need help? Live chat / WhatsApp button”
+
+✅ E) Legal Pages (Must Have)
+
+Create these pages:
+
+Refund Policy
+
+Terms of Service
+
+Privacy Policy
+
+Contact Us
+
+DMCA / Copyright page
+
+3) SEO Requirements (Friendly SEO Style)
+
+For each page generate:
+
+SEO Title (max 60 characters)
+
+Meta description (max 155 characters)
+
+H1 + H2 structure
+
+Keyword placements naturally (no stuffing)
+
+Internal links between categories and products
+
+Blog-ready structure (optional)
+
+Example keywords to use naturally:
+
+test bank PDF
+
+exam practice questions
+
+instant download test bank
+
+nursing test bank
+
+study resources
+
+exam preparation
+
+4) Design & UI Style Guide
+
+Design must be:
+
+Clean white background
+
+Modern font
+
+Strong contrast buttons
+
+Trust elements visible above the fold
+
+Sticky “Buy Now” button on mobile
+
+Use:
+
+Rounded cards
+
+Soft shadows
+
+Simple icons
+
+Minimal clutter
+
+5) Copywriting Rules (High Conversion)
+
+Tone: friendly, confident, student-focused.
+
+Use:
+
+Clear benefits
+
+Short sentences
+
+Easy language
+
+Strong CTA
+
+Examples of product microcopy:
+
+“Instant download after checkout”
+
+“Start studying in 2 minutes”
+
+“Secure payment • Fast access • 24/7 support”
+
+6) Product Data Template (Generate 20 Demo Products)
+
+Generate at least 20 products with realistic SEO titles like:
+
+“Test Bank for [Book Name] [Edition] (PDF Download)”
+Include:
+
+Title
+
+Category
+
+Price (use $9–$29 range)
+
+Short description
+
+Long description
+
+FAQ (3–5 questions)
+
+Tags (keywords)
+
+Image placeholder name
+
+7) Conversion Features to Add
+
+Must implement:
+
+Discount system (10–20% off)
+
+“Bundle deals” (Buy 2 get 1)
+
+Exit intent popup: “Get 10% off”
+
+Email capture
+
+Cart drawer + upsell
+
+WhatsApp support button
+
+Trust badges + reviews
+
+8) Final Output Format
+
+Deliver:
+
+Store sitemap
+
+Full homepage copy + layout
+
+Product page template (complete)
+
+Category page template
+
+Checkout layout
+
+Legal pages draft
+
+SEO metadata for each page
+
+20 demo products
+
+⚠️ Important Notes
+
+The store must load fast and be optimized for mobile.
+
+The design must look premium and professional.
+
+Focus on conversion + SEO.
+
+No complicated text. Simple and direct.
