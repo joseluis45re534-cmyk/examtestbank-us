@@ -121,9 +121,59 @@ async function seedDatabase() {
     createdCats.push(cat);
   }
 
-  // 2. Products (20 items)
+  // 2. Products (Including new products from CSV)
   const productsData = [
-    // Nursing
+    {
+      title: "Advanced Assessment 3rd Edition Mary Jo Goolsby Test Bank",
+      slug: "advanced-assessment-3rd-edition-test-bank",
+      categoryId: createdCats.find(c => c.slug === "nursing").id,
+      price: "19.99",
+      originalPrice: "29.99",
+      shortDescription: "Your comprehensive academic resource with diverse assessment tools to enhance learning. Ideal for educators and students seeking precision in evaluation and self-assessment.",
+      longDescription: "The 'Advanced Assessment 3rd Edition Mary Jo Goolsby Test Bank' includes all chapters and serves as a valuable resource for your academic journey. It offers comprehensive assessment tools to enhance learning.",
+      author: "Mary Jo Goolsby",
+      edition: "3rd Edition",
+      year: 2024,
+      imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+      tags: ["nursing", "advanced assessment", "test bank"],
+      isBestSeller: true,
+      rating: "5.0",
+      reviewCount: 42
+    },
+    {
+      title: "Advanced Practice Nursing of Adults in Acute Care Test Bank",
+      slug: "advanced-practice-nursing-adults-acute-care-test-bank",
+      categoryId: createdCats.find(c => c.slug === "nursing").id,
+      price: "24.99",
+      originalPrice: "34.99",
+      shortDescription: "Your comprehensive academic resource with diverse assessment tools to enhance learning. Ideal for educators and students seeking precision in evaluation and self-assessment.",
+      longDescription: "The 'Advanced Practice Nursing of Adults in Acute Care 1st Edition Test Bank' includes all chapters and serves as a valuable resource for your academic journey. It offers comprehensive assessment tools for acute care nursing.",
+      author: "Unknown",
+      edition: "1st Edition",
+      year: 2024,
+      imageUrl: "https://images.unsplash.com/photo-1584036561566-b93a50208c3c?auto=format&fit=crop&q=80&w=600",
+      tags: ["nursing", "acute care", "test bank"],
+      isBestSeller: false,
+      rating: "4.9",
+      reviewCount: 15
+    },
+    {
+      title: "Advancing Your Career Concepts of Professional Nursing 6th Edition Test Bank",
+      slug: "advancing-your-career-concepts-nursing-6th-edition-test-bank",
+      categoryId: createdCats.find(c => c.slug === "nursing").id,
+      price: "21.99",
+      originalPrice: "31.99",
+      shortDescription: "Your comprehensive academic resource with diverse assessment tools to enhance learning. Ideal for educators and students seeking precision in evaluation and self-assessment.",
+      longDescription: "The 'Advancing Your Career Concepts of Professional Nursing 6th Edition Test Bank' includes all chapters and serves as a valuable resource for your academic journey.",
+      author: "Unknown",
+      edition: "6th Edition",
+      year: 2024,
+      imageUrl: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&q=80&w=600",
+      tags: ["nursing", "career concepts", "test bank"],
+      isBestSeller: true,
+      rating: "4.8",
+      reviewCount: 24
+    },
     {
       title: "Test Bank for Medical-Surgical Nursing",
       slug: "medical-surgical-nursing-test-bank",
@@ -175,7 +225,6 @@ async function seedDatabase() {
         rating: "4.7",
         reviewCount: 45
     },
-    // Medical
     {
         title: "Guyton and Hall Textbook of Medical Physiology",
         slug: "medical-physiology-test-bank",
@@ -210,7 +259,6 @@ async function seedDatabase() {
         rating: "4.6",
         reviewCount: 34
     },
-     // Business
     {
         title: "Principles of Marketing Test Bank",
         slug: "principles-of-marketing-test-bank",
@@ -245,7 +293,6 @@ async function seedDatabase() {
         rating: "4.8",
         reviewCount: 67
     },
-    // Engineering
     {
         title: "Engineering Mechanics: Statics",
         slug: "engineering-mechanics-statics-test-bank",
@@ -263,7 +310,6 @@ async function seedDatabase() {
         rating: "4.7",
         reviewCount: 15
     },
-    // Pharmacology
     {
         title: "Basic and Clinical Pharmacology",
         slug: "basic-clinical-pharmacology-test-bank",
@@ -281,7 +327,6 @@ async function seedDatabase() {
         rating: "4.9",
         reviewCount: 98
     },
-    // Dentistry
     {
         title: "Clinical Periodontology",
         slug: "clinical-periodontology-test-bank",
@@ -299,8 +344,7 @@ async function seedDatabase() {
         rating: "4.6",
         reviewCount: 12
     },
-    // Adding more to reach near 20...
-     {
+    {
         title: "Maternal-Child Nursing",
         slug: "maternal-child-nursing-test-bank",
         categoryId: createdCats.find(c => c.slug === "nursing").id,
