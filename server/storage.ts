@@ -12,7 +12,7 @@ import {
   type InsertOrder,
   type InsertContactMessage,
 } from "@shared/schema";
-import { eq, desc, ilike, or, sql } from "drizzle-orm";
+import { eq, desc, ilike, or, and, sql } from "drizzle-orm";
 
 export interface IStorage {
   // Products
