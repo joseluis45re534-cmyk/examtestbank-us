@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS products (
   file_format TEXT NOT NULL DEFAULT 'PDF',
   is_best_seller BOOLEAN DEFAULT FALSE,
   is_new BOOLEAN DEFAULT FALSE,
-  review_count INTEGER DEFAULT 0
+  review_count INTEGER DEFAULT 0,
+  edition TEXT
 );
 
 CREATE TABLE IF NOT EXISTS reviews (
