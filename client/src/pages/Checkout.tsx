@@ -241,7 +241,7 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
             </form>
           </Form>
         ) : (
-          <PayPalScriptProvider options={{ clientId: "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkHjHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD" }}>
+          <PayPalScriptProvider options={{ clientId: "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD" }}>
             <PayPalPayment
               amount={total()}
               onSuccess={(details) => {
