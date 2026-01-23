@@ -245,7 +245,8 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
           <ErrorBoundary>
             <div className="p-4 border rounded-md bg-gray-50">
               <h3 className="text-center mb-4 font-semibold text-gray-700">Pay with PayPal</h3>
-              <PayPalScriptProvider options={{ "client-id": "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD" }}>
+              {/* Fixed options: included kebab-case client-id AND components: 'buttons' */}
+              <PayPalScriptProvider options={{ "client-id": "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD", components: "buttons" }}>
                 <PayPalPayment
                   amount={total()}
                   onSuccess={(details) => {
