@@ -18,6 +18,7 @@ import { stripePromise } from "@/lib/stripe";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { PayPalPayment } from "@/components/paypal-button";
+import { ErrorBoundary } from "@/components/error-boundary";
 
 // Schema without card details (handled by Stripe)
 const checkoutSchema = z.object({
