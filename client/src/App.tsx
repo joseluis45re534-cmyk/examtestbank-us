@@ -13,19 +13,50 @@ import Home from "@/pages/Home";
 import ProductList from "@/pages/ProductList";
 import ProductDetail from "@/pages/ProductDetail";
 import Checkout from "@/pages/Checkout";
+import OrderConfirmation from "@/pages/OrderConfirmation";
+
+// Admin Pages
+import AdminLogin from "@/pages/admin/Login";
+import AdminDashboard from "@/pages/admin/Dashboard";
+
+// Helper to wrap public pages with Header/Footer
+const PublicLayout = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <Header />
+    <main className="flex-grow">{children}</main>
+    <Footer />
+    <CartDrawer />
+  </>
+);
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/products" component={ProductList} />
+      {/* Public Routes - Wrapped in PublicLayout */}
+      <Route path="/">
+        {() => <PublicLayout><Home /></PublicLayout>}
+      </Route>
+      <Route path="/products">
+        {() => <PublicLayout><ProductList /></PublicLayout>}
+      </Route>
       <Route path="/category/:category">
-        {(params) => <ProductList params={params} />}
+        {(params) => <PublicLayout><ProductList params={params} /></PublicLayout>}
       </Route>
       <Route path="/product/:slug">
-        {(params) => <ProductDetail params={params} />}
+        {(params) => <PublicLayout><ProductDetail params={params} /></PublicLayout>}
       </Route>
-      <Route path="/checkout" component={Checkout} />
+      <Route path="/checkout">
+        {() => <PublicLayout><Checkout /></PublicLayout>}
+      </Route>
+      <Route path="/order-confirmation">
+        {() => <PublicLayout><OrderConfirmation /></PublicLayout>}
+      </Route>
+
+      {/* Admin Routes - No PublicLayout (Header/Footer hidden) */}
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin" component={AdminDashboard} />
+
+      {/* Fallback */}
       <Route component={NotFound} />
     </Switch>
   );
@@ -36,12 +67,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="flex flex-col min-h-screen font-body text-slate-900">
-          <Header />
-          <main className="flex-grow">
-            <Router />
-          </main>
-          <Footer />
-          <CartDrawer />
+          {/* Router handles layouts now */}
+          <Router />
           <Toaster />
         </div>
       </TooltipProvider>
