@@ -14,6 +14,8 @@ export interface IStorage {
     getProducts(params?: { category?: string; search?: string; limit?: number; featured?: boolean }): Promise<Product[]>;
     getProduct(id: number): Promise<Product | undefined>;
     getProductBySlug(slug: string): Promise<Product | undefined>;
+    createProduct(product: any): Promise<Product>;
+    deleteProduct(id: number): Promise<void>;
 
     // Categories
     getCategories(): Promise<Category[]>;

@@ -118,6 +118,20 @@ export class MemStorage implements IStorage {
         return this.products.find(p => p.slug === slug);
     }
 
+    async createProduct(product: any): Promise<Product> {
+        const id = this.currentId.products++;
+        const newProduct = { ...product, id };
+        this.products.push(newProduct);
+        return newProduct;
+    }
+
+    async deleteProduct(id: number): Promise<void> {
+        const index = this.products.findIndex(p => p.id === id);
+        if (index !== -1) {
+            this.products.splice(index, 1);
+        }
+    }
+
     async getCategories(): Promise<Category[]> {
         return this.categories;
     }

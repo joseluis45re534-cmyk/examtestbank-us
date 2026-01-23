@@ -17,19 +17,67 @@ export default function AdminProducts() {
     const queryClient = useQueryClient();
     const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-    // Mock Mutation for Deleting Product
-    const deleteMutation = useMutation({
-        mutationFn: async (id: number) => {
-            console.log("Deleting product", id);
-            return new Promise(resolve => setTimeout(resolve, 500));
+    // Create Product Mutation
+    const createMutation = useMutation({
+        mutationFn: async (newProduct: any) => {
+            const res = await fetch("/api/products", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    ...newProduct,
+                    // Default values for demo
+                    slug: newProduct.title.toLowerCase().replace(/\s+/g, '-'),
+                    shortDescription: "Generated product description",
+                    longDescription: "Detailed description of the product...",
+                    categoryId: 1, // Default to Nursing for now
+                    imageUrl: "https://placehold.co/400x600/png",
+                }),
+            });
+            if (!res.ok) throw new Error("Failed to create product");
+            return res.json();
         },
         onSuccess: () => {
-            toast({ title: "Product deleted (Simulated)" });
-            // In real app: queryClient.invalidateQueries({ queryKey: ["/api/products"] });
+            queryClient.invalidateQueries({ queryKey: ["/api/products"] });
+            toast({ title: "Product created successfully" });
+            setIsDialogOpen(false);
+        },
+        onError: () => {
+            toast({ title: "Failed to create product", variant: "destructive" });
+        }
+    });
+
+    // Delete Product Mutation
+    const deleteMutation = useMutation({
+        mutationFn: async (id: number) => {
+            const res = await fetch(`/api/products/${id}`, {
+                method: "DELETE",
+            });
+            if (!res.ok) throw new Error("Failed to delete product");
+            return res.json();
+        },
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ["/api/products"] });
+            toast({ title: "Product deleted" });
+        },
+        onError: () => {
+            toast({ title: "Failed to delete product", variant: "destructive" });
         }
     });
 
     const isLoading = productsLoading || categoriesLoading;
+
+    // Local form state
+    const [title, setTitle] = useState("");
+    const [price, setPrice] = useState("");
+    const [category, setCategory] = useState("");
+
+    const handleCreate = () => {
+        createMutation.mutate({
+            title,
+            price: price.toString(),
+            categorySlug: category.toLowerCase() // Simple mapping
+        });
+    };
 
     if (isLoading) {
         return (
@@ -62,20 +110,31 @@ export default function AdminProducts() {
                         <div className="space-y-4 py-4">
                             <div className="space-y-2">
                                 <Label>Product Name</Label>
-                                <Input placeholder="e.g. Nursing Test Bank 2024" />
+                                <Input
+                                    placeholder="e.g. Nursing Test Bank 2024"
+                                    value={title}
+                                    onChange={(e) => setTitle(e.target.value)}
+                                />
                             </div>
                             <div className="space-y-2">
                                 <Label>Price ($)</Label>
-                                <Input type="number" placeholder="29.99" />
+                                <Input
+                                    type="number"
+                                    placeholder="29.99"
+                                    value={price}
+                                    onChange={(e) => setPrice(e.target.value)}
+                                />
                             </div>
                             <div className="space-y-2">
                                 <Label>Category</Label>
-                                <Input placeholder="Nursing" />
+                                <Input
+                                    placeholder="Nursing"
+                                    value={category}
+                                    onChange={(e) => setCategory(e.target.value)}
+                                />
                             </div>
-                            <Button className="w-full" onClick={() => {
-                                toast({ title: "Product added (Simulated)" });
-                                setIsDialogOpen(false);
-                            }}>
+                            <Button className="w-full" onClick={handleCreate} disabled={createMutation.isPending}>
+                                {createMutation.isPending && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
                                 Save Product
                             </Button>
                         </div>
