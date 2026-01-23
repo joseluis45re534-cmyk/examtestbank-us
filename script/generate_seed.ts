@@ -5,7 +5,9 @@ import path from "path";
 
 function escapeSql(str: string | null | undefined): string {
     if (str === null || str === undefined) return "NULL";
-    return "'" + str.replace(/'/g, "''").replace(/\n/g, "\\n") + "'";
+    // Replace single quotes with double single quotes for SQL safety.
+    // DO NOT replace \n with \\n as we want actual newlines in the DB.
+    return "'" + str.replace(/'/g, "''") + "'";
 }
 
 const sqlHeader = `
