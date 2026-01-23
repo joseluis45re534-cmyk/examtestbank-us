@@ -102,6 +102,11 @@ export class D1Storage implements IStorage {
     }
 
     // Orders
+    async getOrders(): Promise<Order[]> {
+        const { results } = await this.db.prepare("SELECT * FROM orders ORDER BY created_at DESC").all();
+        return results.map((r: any) => this.mapOrder(r));
+    }
+
     async createOrder(order: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any> {
         // Transaction manually or just sequential
         // D1 supports batching but true transactions rely on worker environment quirks.
@@ -142,9 +147,12 @@ export class D1Storage implements IStorage {
             isbn: row.isbn,
             pages: row.pages,
             fileFormat: row.file_format,
+            year: row.year,
+            tags: row.tags ? JSON.parse(row.tags) : [],
             isBestSeller: row.is_best_seller === 1,
-            isNew: row.is_new === 1,
-            reviewCount: row.review_count
+            rating: row.rating,
+            reviewCount: row.review_count,
+            edition: row.edition
         };
     }
 
@@ -156,10 +164,10 @@ export class D1Storage implements IStorage {
         return rows.map(r => ({
             id: r.id,
             productId: r.product_id,
-            username: r.author,
+            authorName: r.author,
             rating: r.rating,
-            comment: r.content,
-            createdAt: new Date(r.created_at),
+            content: r.content,
+            createdAt: r.created_at ? new Date(r.created_at) : null,
             isVerified: r.is_verified === 1
         }));
     }

@@ -19,6 +19,7 @@ import OrderConfirmation from "@/pages/OrderConfirmation";
 import AdminLogin from "@/pages/admin/Login";
 import AdminDashboard from "@/pages/admin/Dashboard";
 import AdminProducts from "@/pages/admin/Products";
+import AdminOrders from "@/pages/admin/Orders";
 
 // Helper to wrap public pages with Header/Footer
 const PublicLayout = ({ children }: { children: React.ReactNode }) => (
@@ -57,6 +58,7 @@ function Router() {
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/products" component={AdminProducts} />
+      <Route path="/admin/orders" component={AdminOrders} />
 
       {/* Fallback */}
       <Route component={NotFound} />

@@ -156,6 +156,10 @@ export class MemStorage implements IStorage {
         return newReview;
     }
 
+    async getOrders(): Promise<Order[]> {
+        return [...this.orders].sort((a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0));
+    }
+
     async createOrder(orderData: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any> {
         const order = {
             id: this.currentId.orders++,

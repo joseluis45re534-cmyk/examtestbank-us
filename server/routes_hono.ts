@@ -76,15 +76,27 @@ app.get(api.categories.list.path, async (c) => {
 
 app.get(api.categories.get.path, async (c) => {
     const slug = c.req.param('slug');
-    const category = await storage.getCategoryBySlug(slug);
+    if (!slug) return c.json({ message: "Invalid slug" }, 400);
+    const category = await storage.getCategoryBySlug(slug as string);
     if (!category) return c.json({ message: "Category not found" }, 404);
     return c.json(category);
 });
 
 app.get(api.reviews.list.path, async (c) => {
     const id = c.req.param('id');
+    if (!id) return c.json([]);
     const reviews = await storage.getReviews(Number(id));
     return c.json(reviews);
+});
+
+app.get("/api/admin/orders", async (c) => {
+    // In a real app, check admin session here
+    try {
+        const orders = await storage.getOrders();
+        return c.json(orders);
+    } catch (err) {
+        return c.json({ message: "Failed to fetch orders" }, 500);
+    }
 });
 
 app.post(api.orders.create.path, async (c) => {
