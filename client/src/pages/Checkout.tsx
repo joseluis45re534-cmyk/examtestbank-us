@@ -245,28 +245,26 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
           <ErrorBoundary>
             <div className="p-4 border rounded-md bg-gray-50">
               <h3 className="text-center mb-4 font-semibold text-gray-700">Pay with PayPal</h3>
-              {/* Fixed options: included kebab-case client-id AND components: 'buttons' */}
-              <PayPalScriptProvider options={{ "client-id": "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD", components: "buttons" }}>
-                <PayPalPayment
-                  amount={total()}
-                  onSuccess={(details) => {
-                    toast({
-                      title: "PayPal Payment Successful",
-                      description: "Order placed!",
-                    });
-                    createOrder({
-                      email: "paypal-user@example.com",
-                      totalAmount: total().toString(),
-                      items: items.map(i => ({ productId: i.id, quantity: i.quantity }))
-                    }, {
-                      onSuccess: () => {
-                        clearCart();
-                        setLocation("/");
-                      }
-                    });
-                  }}
-                />
-              </PayPalScriptProvider>
+              {/* Provider moved to root, so we just render button here */}
+              <PayPalPayment
+                amount={total()}
+                onSuccess={(details) => {
+                  toast({
+                    title: "PayPal Payment Successful",
+                    description: "Order placed!",
+                  });
+                  createOrder({
+                    email: "paypal-user@example.com",
+                    totalAmount: total().toString(),
+                    items: items.map(i => ({ productId: i.id, quantity: i.quantity }))
+                  }, {
+                    onSuccess: () => {
+                      clearCart();
+                      setLocation("/");
+                    }
+                  });
+                }}
+              />
             </div>
           </ErrorBoundary>
         )}
@@ -353,29 +351,31 @@ export default function Checkout() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 py-12">
-      <div className="container-width">
-        <h1 className="text-3xl font-bold mb-8 font-display">Checkout</h1>
+    <PayPalScriptProvider options={{ "client-id": "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD", components: "buttons" }}>
+      <div className="min-h-screen bg-slate-50 py-12">
+        <div className="container-width">
+          <h1 className="text-3xl font-bold mb-8 font-display">Checkout</h1>
 
-        {error && (
-          <div className="p-4 mb-6 rounded-md bg-red-50 border border-red-200 text-red-600">
-            <p className="font-bold">Error</p>
-            <p>{error}</p>
-          </div>
-        )}
-
-        {clientSecret ? (
-          <Elements stripe={stripePromise} options={{ clientSecret, appearance: { theme: 'stripe' } }}>
-            <CheckoutForm clientSecret={clientSecret} />
-          </Elements>
-        ) : (
-          !error && (
-            <div className="flex justify-center py-12">
-              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          {error && (
+            <div className="p-4 mb-6 rounded-md bg-red-50 border border-red-200 text-red-600">
+              <p className="font-bold">Error</p>
+              <p>{error}</p>
             </div>
-          )
-        )}
+          )}
+
+          {clientSecret ? (
+            <Elements stripe={stripePromise} options={{ clientSecret, appearance: { theme: 'stripe' } }}>
+              <CheckoutForm clientSecret={clientSecret} />
+            </Elements>
+          ) : (
+            !error && (
+              <div className="flex justify-center py-12">
+                <Loader2 className="w-8 h-8 animate-spin text-primary" />
+              </div>
+            )
+          )}
+        </div>
       </div>
-    </div>
+    </PayPalScriptProvider>
   );
 }
