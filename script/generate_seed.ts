@@ -13,27 +13,28 @@ const sqlHeader = `
 -- Clears existing products to avoid duplicates during re-seed
 DELETE FROM products;
 DELETE FROM sqlite_sequence WHERE name='products';
-
-INSERT INTO products (title, slug, short_description, long_description, price, image_url, category_id, author, edition, is_best_seller, review_count, file_format) VALUES
 `;
 
-const values = importedProducts.map(p => {
-    // Default Category ID 1 (Nursing) for now as simple mapping
-    // We could map categorySlug to IDs if we query categories first, but for now 1 is safe as per previous step
-    // Or we can try to be smarter: 
-    // nursing -> 1, medical -> 2, business -> 3
-    let catId = 1;
-    if ((p.categorySlug || "").includes("medical")) catId = 2;
-    if ((p.categorySlug || "").includes("business")) catId = 3;
+let fullSql = sqlHeader;
+const BATCH_SIZE = 50;
 
-    return `(${escapeSql(p.title)}, ${escapeSql(p.slug)}, ${escapeSql(p.shortDescription)}, ${escapeSql(p.longDescription)}, ${p.price || 0}, ${escapeSql(p.imageUrl)}, ${catId}, ${escapeSql(p.author)}, ${escapeSql(p.edition)}, ${p.isBestSeller ? 1 : 0}, ${p.reviewCount || 0}, 'PDF')`;
-}).join(",\n");
+for (let i = 0; i < importedProducts.length; i += BATCH_SIZE) {
+    const batch = importedProducts.slice(i, i + BATCH_SIZE);
 
-const sqlFooter = ";\n";
+    fullSql += `\nINSERT INTO products (title, slug, short_description, long_description, price, image_url, category_id, author, edition, is_best_seller, review_count, file_format) VALUES\n`;
 
-const fullSql = sqlHeader + values + sqlFooter;
+    const values = batch.map(p => {
+        let catId = 1;
+        if ((p.categorySlug || "").includes("medical")) catId = 2;
+        if ((p.categorySlug || "").includes("business")) catId = 3;
+
+        return `(${escapeSql(p.title)}, ${escapeSql(p.slug)}, ${escapeSql(p.shortDescription)}, ${escapeSql(p.longDescription)}, ${p.price || 0}, ${escapeSql(p.imageUrl)}, ${catId}, ${escapeSql(p.author)}, ${escapeSql(p.edition)}, ${p.isBestSeller ? 1 : 0}, ${p.reviewCount || 0}, 'PDF')`;
+    }).join(",\n");
+
+    fullSql += `${values};\n`;
+}
 
 const outputPath = path.join(process.cwd(), "seed_products.sql");
 fs.writeFileSync(outputPath, fullSql);
 
-console.log(`Generated seed_products.sql with ${importedProducts.length} products.`);
+console.log(`Generated seed_products.sql with ${importedProducts.length} products in batches of ${BATCH_SIZE}.`);
