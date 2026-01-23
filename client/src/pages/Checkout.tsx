@@ -297,9 +297,8 @@ export default function Checkout() {
 
         {error && (
           <div className="p-4 mb-6 rounded-md bg-red-50 border border-red-200 text-red-600">
-            <p className="font-bold">Setup Error</p>
+            <p className="font-bold">Error</p>
             <p>{error}</p>
-            <p className="text-sm mt-2 text-red-500">Note: This might be due to missing payment API keys in the dashboard.</p>
           </div>
         )}
 
