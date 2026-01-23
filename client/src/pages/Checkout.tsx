@@ -242,27 +242,32 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
             </form>
           </Form>
         ) : (
-          <PayPalScriptProvider options={{ clientId: "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD" }}>
-            <PayPalPayment
-              amount={total()}
-              onSuccess={(details) => {
-                toast({
-                  title: "PayPal Payment Successful",
-                  description: "Order placed!",
-                });
-                createOrder({
-                  email: "paypal-user@example.com",
-                  totalAmount: total().toString(),
-                  items: items.map(i => ({ productId: i.id, quantity: i.quantity }))
-                }, {
-                  onSuccess: () => {
-                    clearCart();
-                    setLocation("/");
-                  }
-                });
-              }}
-            />
-          </PayPalScriptProvider>
+          <ErrorBoundary>
+            <div className="p-4 border rounded-md bg-gray-50">
+              <h3 className="text-center mb-4 font-semibold text-gray-700">Pay with PayPal</h3>
+              <PayPalScriptProvider options={{ "client-id": "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD" }}>
+                <PayPalPayment
+                  amount={total()}
+                  onSuccess={(details) => {
+                    toast({
+                      title: "PayPal Payment Successful",
+                      description: "Order placed!",
+                    });
+                    createOrder({
+                      email: "paypal-user@example.com",
+                      totalAmount: total().toString(),
+                      items: items.map(i => ({ productId: i.id, quantity: i.quantity }))
+                    }, {
+                      onSuccess: () => {
+                        clearCart();
+                        setLocation("/");
+                      }
+                    });
+                  }}
+                />
+              </PayPalScriptProvider>
+            </div>
+          </ErrorBoundary>
         )}
       </div>
 
