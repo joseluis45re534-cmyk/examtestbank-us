@@ -93,6 +93,40 @@ export async function registerRoutes(
     }
   });
 
+
+  // Payment Routes
+  app.post("/api/create-payment-intent", async (req, res) => {
+    try {
+      const { amount, currency = "usd" } = req.body;
+      
+      if (!process.env.STRIPE_SECRET_KEY) {
+        console.warn("No STRIPE_SECRET_KEY found. Mocking payment intent.");
+        return res.json({ 
+          clientSecret: "mock_secret_" + Date.now(),
+          mock: true 
+        });
+      }
+
+      const Stripe = (await import("stripe")).default;
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+        apiVersion: "2025-01-27.acacia", 
+      });
+
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount: Math.round(amount * 100), // Convert to cents
+        currency,
+        automatic_payment_methods: {
+          enabled: true,
+        },
+      });
+
+      res.json({ clientSecret: paymentIntent.client_secret });
+    } catch (error: any) {
+      console.error("Stripe error:", error);
+      res.status(500).json({ message: error.message });
+    }
+  });
+
   // Seed Data function
   if (process.env.DATABASE_URL) {
     await seedDatabase();

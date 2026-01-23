@@ -97,4 +97,37 @@ app.post(api.contact.submit.path, async (c) => {
     }
 });
 
+app.post("/api/create-payment-intent", async (c) => {
+    try {
+        const { amount, currency = "usd" } = await c.req.json();
+
+        // In Cloudflare Pages, env vars are accessed differently (c.env), 
+        // but for this hybrid setup we check process.env or just mock if missing for now.
+        // For real Edge Stripe, we need to pass binding.
+        const apiKey = process.env.STRIPE_SECRET_KEY; // Fallback
+
+        if (!apiKey) {
+            return c.json({
+                clientSecret: "mock_secret_" + Date.now(),
+                mock: true
+            });
+        }
+
+        const Stripe = (await import("stripe")).default;
+        const stripe = new Stripe(apiKey, {
+            apiVersion: "2025-01-27.acacia",
+        });
+
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount: Math.round(amount * 100),
+            currency,
+            automatic_payment_methods: { enabled: true },
+        });
+
+        return c.json({ clientSecret: paymentIntent.client_secret });
+    } catch (error: any) {
+        return c.json({ message: error.message }, 500);
+    }
+});
+
 export default app;
