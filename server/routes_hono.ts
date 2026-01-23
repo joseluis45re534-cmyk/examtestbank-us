@@ -123,7 +123,7 @@ app.post("/api/create-payment-intent", async (c) => {
         }
 
         const stripe = new Stripe(apiKey, {
-            apiVersion: "2025-01-27.acacia",
+            apiVersion: "2025-12-15.clover",
             httpClient: Stripe.createFetchHttpClient(), // Important for Edge/Workers
         });
 
@@ -137,6 +137,28 @@ app.post("/api/create-payment-intent", async (c) => {
     } catch (error: any) {
         console.error("Payment intent error:", error);
         return c.json({ message: error.message || "Payment init failed" }, 500);
+    }
+});
+
+// PayPal Routes
+app.post("/api/create-paypal-order", async (c) => {
+    try {
+        const { amount } = await c.req.json();
+        // MOCK: Return a fake orderID for demo purposes
+        // In production, call PayPal API to create generic order
+        return c.json({ orderID: "mock_paypal_order_" + Date.now() });
+    } catch (error: any) {
+        return c.json({ message: error.message }, 500);
+    }
+});
+
+app.post("/api/capture-paypal-order", async (c) => {
+    try {
+        const { orderID } = await c.req.json();
+        // MOCK: Simulate successful capture
+        return c.json({ status: "COMPLETED", id: orderID });
+    } catch (error: any) {
+        return c.json({ message: error.message }, 500);
     }
 });
 

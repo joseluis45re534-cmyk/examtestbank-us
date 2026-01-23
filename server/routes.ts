@@ -98,18 +98,18 @@ export async function registerRoutes(
   app.post("/api/create-payment-intent", async (req, res) => {
     try {
       const { amount, currency = "usd" } = req.body;
-      
+
       if (!process.env.STRIPE_SECRET_KEY) {
         console.warn("No STRIPE_SECRET_KEY found. Mocking payment intent.");
-        return res.json({ 
+        return res.json({
           clientSecret: "mock_secret_" + Date.now(),
-          mock: true 
+          mock: true
         });
       }
 
       const Stripe = (await import("stripe")).default;
       const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-        apiVersion: "2025-01-27.acacia", 
+        apiVersion: "2025-12-15.clover",
       });
 
       const paymentIntent = await stripe.paymentIntents.create({
@@ -123,6 +123,25 @@ export async function registerRoutes(
       res.json({ clientSecret: paymentIntent.client_secret });
     } catch (error: any) {
       console.error("Stripe error:", error);
+      res.status(500).json({ message: error.message });
+    }
+  });
+
+  // PayPal Routes
+  app.post("/api/create-paypal-order", async (req, res) => {
+    try {
+      const { amount } = req.body;
+      res.json({ orderID: "mock_paypal_order_" + Date.now() });
+    } catch (error: any) {
+      res.status(500).json({ message: error.message });
+    }
+  });
+
+  app.post("/api/capture-paypal-order", async (req, res) => {
+    try {
+      const { orderID } = req.body;
+      res.json({ status: "COMPLETED", id: orderID });
+    } catch (error: any) {
       res.status(500).json({ message: error.message });
     }
   });

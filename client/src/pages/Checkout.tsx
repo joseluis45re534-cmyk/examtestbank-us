@@ -15,7 +15,9 @@ import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { stripePromise } from "@/lib/stripe";
-import { api } from "@shared/routes";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { PayPalPayment } from "@/components/paypal-button";
 
 // Schema without card details (handled by Stripe)
 const checkoutSchema = z.object({
@@ -26,12 +28,13 @@ const checkoutSchema = z.object({
 
 function CheckoutForm({ clientSecret }: { clientSecret: string }) {
   const { items, total, clearCart } = useCart();
-  const { mutate: createOrder } = useCreateOrder(); // removed isPending from here, managing local state
+  const { mutate: createOrder } = useCreateOrder();
   const { toast } = useToast();
   const [, setLocation] = useLocation();
   const stripe = useStripe();
   const elements = useElements();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<"stripe" | "paypal">("stripe");
 
   const form = useForm<z.infer<typeof checkoutSchema>>({
     resolver: zodResolver(checkoutSchema),
@@ -120,94 +123,146 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* Form Column */}
       <div className="lg:col-span-2 space-y-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 
-            {/* Contact Info */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
-                <CardDescription>We'll send your download link here.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email Address</FormLabel>
-                      <FormControl>
-                        <Input placeholder="student@university.edu" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </CardContent>
-            </Card>
+        {/* Payment Method Selector */}
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold mb-3">Payment Method</h2>
+          <RadioGroup defaultValue={paymentMethod} onValueChange={(v) => setPaymentMethod(v as "stripe" | "paypal")} className="grid grid-cols-2 gap-4">
+            <div>
+              <RadioGroupItem value="stripe" id="stripe" className="peer sr-only" />
+              <Label
+                htmlFor="stripe"
+                className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              >
+                <CreditCard className="mb-3 h-6 w-6" />
+                Credit Card
+              </Label>
+            </div>
+            <div>
+              <RadioGroupItem value="paypal" id="paypal" className="peer sr-only" />
+              <Label
+                htmlFor="paypal"
+                className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+              >
+                <span className="text-xl font-bold italic mb-3 text-[#003087]">PayPal</span>
+                PayPal
+              </Label>
+            </div>
+          </RadioGroup>
+        </div>
 
-            {/* Payment Info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CreditCard className="w-5 h-5" /> Payment Details
-                </CardTitle>
-                <CardDescription className="flex items-center gap-1 text-green-600">
-                  <Lock className="w-3 h-3" /> Secure SSL Encrypted Transaction
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+        {paymentMethod === 'stripe' ? (
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+
+              {/* Contact Info */}
+              <Card>
+                <CardHeader>
+                  <CardTitle>Contact Information</CardTitle>
+                  <CardDescription>We'll send your download link here.</CardDescription>
+                </CardHeader>
+                <CardContent>
                   <FormField
                     control={form.control}
-                    name="firstName"
+                    name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>First Name</FormLabel>
+                        <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="John" {...field} />
+                          <Input placeholder="student@university.edu" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
-                  <FormField
-                    control={form.control}
-                    name="lastName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Last Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                </CardContent>
+              </Card>
 
-                {/* Stripe Element */}
-                <div className="pt-4 border-t">
-                  <Label className="mb-2 block">Card Information</Label>
-                  <div className="p-3 border rounded-md">
-                    <PaymentElement options={{ layout: "tabs" }} />
+              {/* Payment Info */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <CreditCard className="w-5 h-5" /> Payment Details
+                  </CardTitle>
+                  <CardDescription className="flex items-center gap-1 text-green-600">
+                    <Lock className="w-3 h-3" /> Secure SSL Encrypted Transaction
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>First Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="John" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Last Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
-                </div>
 
-              </CardContent>
-            </Card>
+                  {/* Stripe Element */}
+                  <div className="pt-4 border-t">
+                    <Label className="mb-2 block">Card Information</Label>
+                    <div className="p-3 border rounded-md">
+                      <PaymentElement options={{ layout: "tabs" }} />
+                    </div>
+                  </div>
 
-            <Button type="submit" size="lg" className="w-full btn-primary h-14 text-lg" disabled={!stripe || isProcessing}>
-              {isProcessing && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {isProcessing ? "Processing..." : `Pay $${total().toFixed(2)}`}
-            </Button>
+                </CardContent>
+              </Card>
 
-            <p className="text-center text-xs text-muted-foreground flex items-center justify-center gap-1">
-              <ShieldCheck className="w-3 h-3" />
-              Satisfaction Guaranteed. 100% Secure Checkout.
-            </p>
-          </form>
-        </Form>
+              <Button type="submit" size="lg" className="w-full btn-primary h-14 text-lg" disabled={!stripe || isProcessing}>
+                {isProcessing && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                {isProcessing ? "Processing..." : `Pay $${total().toFixed(2)}`}
+              </Button>
+
+              <p className="text-center text-xs text-muted-foreground flex items-center justify-center gap-1">
+                <ShieldCheck className="w-3 h-3" />
+                Satisfaction Guaranteed. 100% Secure Checkout.
+              </p>
+            </form>
+          </Form>
+        ) : (
+          <PayPalScriptProvider options={{ clientId: "test", currency: "USD" }}>
+            <PayPalPayment
+              amount={total()}
+              onSuccess={(details) => {
+                toast({
+                  title: "PayPal Payment Successful",
+                  description: "Order placed!",
+                });
+                createOrder({
+                  email: "paypal-user@example.com",
+                  totalAmount: total().toString(),
+                  items: items.map(i => ({ productId: i.id, quantity: i.quantity }))
+                }, {
+                  onSuccess: () => {
+                    clearCart();
+                    setLocation("/");
+                  }
+                });
+              }}
+            />
+          </PayPalScriptProvider>
+        )}
       </div>
 
       {/* Order Summary */}
