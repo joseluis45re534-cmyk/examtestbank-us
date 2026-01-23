@@ -79,124 +79,90 @@ export class MemStorage implements IStorage {
                 } as Product);
             }
         });
+    }
 
-        // Products
-        const productsData = [
-            {
-                title: "Advanced Assessment 3rd Edition Mary Jo Goolsby Test Bank",
-                slug: "advanced-assessment-3rd-edition-test-bank",
-                categorySlug: "nursing",
-                price: "19.99",
-                originalPrice: "29.99",
-                shortDescription: "Your comprehensive academic resource with diverse assessment tools to enhance learning. Ideal for educators and students seeking precision in evaluation and self-assessment.",
-                longDescription: "The 'Advanced Assessment 3rd Edition Mary Jo Goolsby Test Bank' includes all chapters and serves as a valuable resource for your academic journey. It offers comprehensive assessment tools to enhance learning.",
-                author: "Mary Jo Goolsby",
-                edition: "3rd Edition",
-                year: 2024,
-                imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
-                tags: ["nursing", "advanced assessment", "test bank"],
-                isBestSeller: true,
-                rating: "5.0",
-                reviewCount: 42
-            },
-            {
-                title: "Advanced Practice Nursing of Adults in Acute Care Test Bank",
-                slug: "advanced-practice-nursing-adults-acute-care-test-bank",
-                categorySlug: "nursing",
-                price: "24.99",
-                originalPrice: "34.99",
-                shortDescription: "Your comprehensive academic resource with diverse assessment tools to enhance learning.",
-                longDescription: "The 'Advanced Practice Nursing of Adults in Acute Care 1st Edition Test Bank' includes all chapters.",
-                author: "Unknown",
-                edition: "1st Edition",
-                year: 2024,
-                // Products
-                // Only using imported products now
+    async getProducts(params?: { category?: string; search?: string; limit?: number; featured?: boolean }): Promise<Product[]> {
+        let result = [...this.products];
 
+        if (params?.category) {
+            const cat = this.categories.find(c => c.slug === params.category);
+            if (cat) {
+                result = result.filter(p => p.categoryId === cat.id);
             }
+        }
 
-    async getProducts(params ?: { category?: string; search?: string; limit?: number; featured?: boolean }): Promise < Product[] > {
-                let result =[...this.products];
+        if (params?.search) {
+            const q = params.search.toLowerCase();
+            result = result.filter(p =>
+                p.title.toLowerCase().includes(q) ||
+                p.shortDescription.toLowerCase().includes(q)
+            );
+        }
 
-                if(params?.category) {
-                    const cat = this.categories.find(c => c.slug === params.category);
-                    if (cat) {
-                        result = result.filter(p => p.categoryId === cat.id);
-                    }
-                }
+        if (params?.featured) {
+            result = result.filter(p => p.isBestSeller);
+        }
 
-        if(params?.search) {
-                    const q = params.search.toLowerCase();
-                    result = result.filter(p =>
-                        p.title.toLowerCase().includes(q) ||
-                        p.shortDescription.toLowerCase().includes(q)
-                    );
-                }
-
-        if(params?.featured) {
-                    result = result.filter(p => p.isBestSeller);
-                }
-
-        if(params?.limit) {
-                    result = result.slice(0, params.limit);
-                }
+        if (params?.limit) {
+            result = result.slice(0, params.limit);
+        }
 
         return result;
-            }
+    }
 
-    async getProduct(id: number): Promise < Product | undefined > {
-                return this.products.find(p => p.id === id);
-            }
+    async getProduct(id: number): Promise<Product | undefined> {
+        return this.products.find(p => p.id === id);
+    }
 
-    async getProductBySlug(slug: string): Promise < Product | undefined > {
-                return this.products.find(p => p.slug === slug);
-            }
+    async getProductBySlug(slug: string): Promise<Product | undefined> {
+        return this.products.find(p => p.slug === slug);
+    }
 
-    async getCategories(): Promise < Category[] > {
-                return this.categories;
-            }
+    async getCategories(): Promise<Category[]> {
+        return this.categories;
+    }
 
-    async getCategoryBySlug(slug: string): Promise < Category | undefined > {
-                return this.categories.find(c => c.slug === slug);
-            }
+    async getCategoryBySlug(slug: string): Promise<Category | undefined> {
+        return this.categories.find(c => c.slug === slug);
+    }
 
-    async getReviews(productId: number): Promise < Review[] > {
-                return this.reviews.filter(r => r.productId === productId).sort((a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0));
-            }
+    async getReviews(productId: number): Promise<Review[]> {
+        return this.reviews.filter(r => r.productId === productId).sort((a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0));
+    }
 
-    async createReview(review: any): Promise < Review > {
-                const newReview = {
-                    ...review,
-                    id: this.currentId.reviews++,
-                    createdAt: new Date(),
-                    // Defaults if missing
-                    isVerified: true
-                };
-                this.reviews.push(newReview);
-                return newReview;
-            }
+    async createReview(review: any): Promise<Review> {
+        const newReview = {
+            ...review,
+            id: this.currentId.reviews++,
+            createdAt: new Date(),
+            // Defaults if missing
+            isVerified: true
+        };
+        this.reviews.push(newReview);
+        return newReview;
+    }
 
-    async createOrder(orderData: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise < any > {
-                const order = {
-                    id: this.currentId.orders++,
-                    email: orderData.email,
-                    totalAmount: orderData.totalAmount,
-                    status: "pending",
-                    createdAt: new Date()
-                };
-                this.orders.push(order as Order);
+    async createOrder(orderData: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any> {
+        const order = {
+            id: this.currentId.orders++,
+            email: orderData.email,
+            totalAmount: orderData.totalAmount,
+            status: "pending",
+            createdAt: new Date()
+        };
+        this.orders.push(order as Order);
 
-                for(const item of orderData.items) {
-                const product = this.products.find(p => p.id === item.productId);
-                if(product) {
-                    this.orderItems.push({
-                        id: 0, // Mock ID for item
-                        orderId: order.id,
-                        productId: item.productId,
-                        price: product.price
-                    });
-                }
+        for (const item of orderData.items) {
+            const product = this.products.find(p => p.id === item.productId);
+            if (product) {
+                this.orderItems.push({
+                    id: 0, // Mock ID for item
+                    orderId: order.id,
+                    productId: item.productId,
+                    price: product.price
+                });
             }
+        }
         return order;
     }
 
