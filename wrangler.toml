@@ -4,5 +4,8 @@ pages_build_output_dir = "dist/public"
 
 [vars]
 # NODE_ENV = "production" # Optional
-
+[[d1_databases]]
+binding = "DB"
+database_name = "ecom-db"
+database_id = "459fc68b-5813-4deb-9f7e-b4db5fc16cc0"
 
