@@ -1,4 +1,5 @@
 import { IStorage } from "./storage_interface";
+import { importedProducts } from "./products_data";
 import {
     type Product,
     type Category,
@@ -45,6 +46,38 @@ export class MemStorage implements IStorage {
         catsData.forEach(c => {
             const id = this.currentId.categories++;
             this.categories.push({ ...c, id, imageUrl: null });
+        });
+
+        // Seed Imported Products
+        importedProducts.forEach(p => {
+            // Find or create category
+            // @ts-ignore
+            const catSlug = p.categorySlug || "uncategorized";
+            let cat = this.categories.find(c => c.slug === catSlug);
+            if (!cat) {
+                const newCat = {
+                    name: catSlug.charAt(0).toUpperCase() + catSlug.slice(1).replace(/-/g, ' '),
+                    slug: catSlug,
+                    description: "Imported Category"
+                };
+                const catId = this.currentId.categories++;
+                this.categories.push({ ...newCat, id: catId, imageUrl: null });
+                cat = this.categories.find(c => c.id === catId);
+            }
+
+            if (cat) {
+                const id = this.currentId.products++;
+                // @ts-ignore
+                const { categorySlug, ...rest } = p;
+                this.products.push({
+                    ...rest,
+                    id,
+                    categoryId: cat.id,
+                    isbn: null,
+                    fileFormat: "PDF",
+                    pages: 100
+                } as Product);
+            }
         });
 
         // Products

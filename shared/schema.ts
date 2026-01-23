@@ -119,3 +119,4 @@ export type ContactMessage = typeof contactMessages.$inferSelect;
 
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type InsertOrder = z.infer<typeof insertOrderSchema>;
+export type InsertContactMessage = z.infer<typeof insertContactMessageSchema>;
