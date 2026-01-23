@@ -16,7 +16,7 @@ DELETE FROM sqlite_sequence WHERE name='products';
 `;
 
 let fullSql = sqlHeader;
-const BATCH_SIZE = 50;
+const BATCH_SIZE = 10;
 
 for (let i = 0; i < importedProducts.length; i += BATCH_SIZE) {
     const batch = importedProducts.slice(i, i + BATCH_SIZE);
