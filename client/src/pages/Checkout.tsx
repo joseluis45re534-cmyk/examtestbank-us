@@ -256,6 +256,7 @@ export default function Checkout() {
   const { items, total } = useCart();
   const [, setLocation] = useLocation();
   const [clientSecret, setClientSecret] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (items.length > 0) {
@@ -265,9 +266,18 @@ export default function Checkout() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: total() }),
       })
-        .then((res) => res.json())
-        .then((data) => setClientSecret(data.clientSecret))
-        .catch((err) => console.error("Error creating payment intent:", err));
+        .then((res) => {
+          if (!res.ok) return res.json().then(d => { throw new Error(d.message || "Backend error") });
+          return res.json();
+        })
+        .then((data) => {
+          if (!data.clientSecret) throw new Error("No client secret returned");
+          setClientSecret(data.clientSecret);
+        })
+        .catch((err) => {
+          console.error("Error creating payment intent:", err);
+          setError(err.message || "Failed to initialize payment system");
+        });
     }
   }, [items, total]);
 
@@ -284,14 +294,25 @@ export default function Checkout() {
     <div className="min-h-screen bg-slate-50 py-12">
       <div className="container-width">
         <h1 className="text-3xl font-bold mb-8 font-display">Checkout</h1>
+
+        {error && (
+          <div className="p-4 mb-6 rounded-md bg-red-50 border border-red-200 text-red-600">
+            <p className="font-bold">Setup Error</p>
+            <p>{error}</p>
+            <p className="text-sm mt-2 text-red-500">Note: This might be due to missing payment API keys in the dashboard.</p>
+          </div>
+        )}
+
         {clientSecret ? (
           <Elements stripe={stripePromise} options={{ clientSecret, appearance: { theme: 'stripe' } }}>
             <CheckoutForm clientSecret={clientSecret} />
           </Elements>
         ) : (
-          <div className="flex justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-primary" />
-          </div>
+          !error && (
+            <div className="flex justify-center py-12">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            </div>
+          )
         )}
       </div>
     </div>

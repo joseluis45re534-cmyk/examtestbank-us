@@ -101,21 +101,31 @@ app.post("/api/create-payment-intent", async (c) => {
     try {
         const { amount, currency = "usd" } = await c.req.json();
 
-        // In Cloudflare Pages, env vars are accessed differently (c.env), 
-        // but for this hybrid setup we check process.env or just mock if missing for now.
-        // For real Edge Stripe, we need to pass binding.
-        const apiKey = process.env.STRIPE_SECRET_KEY; // Fallback
+        // Robust Env Access for hybrid Edge/Node environments
+        let apiKey: string | undefined;
+        try {
+            // @ts-ignore
+            if (c.env && c.env.STRIPE_SECRET_KEY) apiKey = c.env.STRIPE_SECRET_KEY;
+            else if (typeof process !== 'undefined' && process.env) apiKey = process.env.STRIPE_SECRET_KEY;
+        } catch (e) { /* ignore access error */ }
 
+        // Fallback to mock if no key
         if (!apiKey) {
-            return c.json({
-                clientSecret: "mock_secret_" + Date.now(),
-                mock: true
-            });
+            console.warn("No API Key found, using mock.");
+            return c.json({ clientSecret: "mock_secret_" + Date.now(), mock: true });
         }
 
-        const Stripe = (await import("stripe")).default;
+        let Stripe;
+        try {
+            Stripe = (await import("stripe")).default;
+        } catch (e) {
+            console.warn("Could not load Stripe SDK (likely Edge environment issue). Falling back to mock.");
+            return c.json({ clientSecret: "mock_secret_" + Date.now(), mock: true });
+        }
+
         const stripe = new Stripe(apiKey, {
             apiVersion: "2025-01-27.acacia",
+            httpClient: Stripe.createFetchHttpClient(), // Important for Edge/Workers
         });
 
         const paymentIntent = await stripe.paymentIntents.create({
@@ -126,7 +136,8 @@ app.post("/api/create-payment-intent", async (c) => {
 
         return c.json({ clientSecret: paymentIntent.client_secret });
     } catch (error: any) {
-        return c.json({ message: error.message }, 500);
+        console.error("Payment intent error:", error);
+        return c.json({ message: error.message || "Payment init failed" }, 500);
     }
 });
 
