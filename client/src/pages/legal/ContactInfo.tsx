@@ -22,8 +22,8 @@ export default function ContactInfo() {
                             </div>
                             <h3 className="text-xl font-bold mb-2">Email Us</h3>
                             <p className="text-muted-foreground mb-4">Our preferred contact method. We usually respond within 2-4 hours.</p>
-                            <a href="mailto:support@examtestbank-us.com" className="text-primary font-bold text-lg hover:underline transition-all">
-                                support@examtestbank-us.com
+                            <a href="mailto:support@examtestbank.us" className="text-primary font-bold text-lg hover:underline transition-all">
+                                support@examtestbank.us
                             </a>
                         </div>
 
@@ -42,10 +42,8 @@ export default function ContactInfo() {
                             </div>
                             <h3 className="text-xl font-bold mb-2">Our Office</h3>
                             <p className="text-muted-foreground">
-                                123 Digital Drive<br />
-                                Suite 456<br />
-                                Tech City, TC 98765<br />
-                                United States
+                                42 Annandale St, Edinburgh<br />
+                                EH7 4AZ, UK
                             </p>
                         </div>
 
@@ -55,8 +53,8 @@ export default function ContactInfo() {
                             </div>
                             <h3 className="text-xl font-bold mb-2">Call Us</h3>
                             <p className="text-muted-foreground mb-4">For urgent inquiries only.</p>
-                            <a href="tel:+1-555-0123-4567" className="text-primary font-bold text-lg hover:underline transition-all">
-                                +1 (555) 0123-4567
+                            <a href="tel:+19413449481" className="text-primary font-bold text-lg hover:underline transition-all">
+                                +19413449481
                             </a>
                         </div>
                     </div>

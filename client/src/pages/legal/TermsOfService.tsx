@@ -44,7 +44,7 @@ export default function TermsOfService() {
 
                     <section className="mb-8">
                         <h2 className="text-2xl font-bold mb-4">7. Contact Information</h2>
-                        <p>Questions about the Terms of Service should be sent to us at support@examtestbank-us.com.</p>
+                        <p>Questions about the Terms of Service should be sent to us at support@examtestbank.us.</p>
                     </section>
                 </motion.div>
             </div>

@@ -49,7 +49,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>support@examtestbank-us.com</span>
+                <span>support@examtestbank.us</span>
               </div>
               <p>Available 24/7 for your study needs.</p>
             </div>

@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
 
                     <section className="mb-8">
                         <h2 className="text-2xl font-bold mb-4">6. Contact Us</h2>
-                        <p>If you have any questions about this Privacy Policy, please contact us at support@examtestbank-us.com.</p>
+                        <p>If you have any questions about this Privacy Policy, please contact us at support@examtestbank.us.</p>
                     </section>
                 </motion.div>
             </div>

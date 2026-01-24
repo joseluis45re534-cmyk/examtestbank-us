@@ -29,7 +29,7 @@ export default function RefundPolicy() {
 
                     <section className="mb-8">
                         <h2 className="text-2xl font-bold mb-4">3. How to Request a Refund</h2>
-                        <p>To request a refund, please contact our support team at **support@examtestbank-us.com** with your order number and the reason for your request. Refund requests must be made within 7 days of purchase.</p>
+                        <p>To request a refund, please contact our support team at **support@examtestbank.us** with your order number and the reason for your request. Refund requests must be made within 7 days of purchase.</p>
                     </section>
 
                     <section className="mb-8">

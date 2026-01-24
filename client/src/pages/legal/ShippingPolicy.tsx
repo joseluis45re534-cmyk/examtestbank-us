@@ -39,7 +39,7 @@ export default function ShippingPolicy() {
 
                     <section className="mb-8">
                         <h2 className="text-2xl font-bold mb-4">5. Contact Us</h2>
-                        <p>If you experience any difficulties with your download, please reach out to **support@examtestbank-us.com**.</p>
+                        <p>If you experience any difficulties with your download, please reach out to **support@examtestbank.us**.</p>
                     </section>
                 </motion.div>
             </div>

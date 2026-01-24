@@ -9,7 +9,7 @@ export const onRequest = async (context: any) => {
 
     try {
         const products = await storage.getProducts();
-        const baseUrl = "https://examtestbank-us.com";
+        const baseUrl = "https://examtestbank.us";
 
         let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
