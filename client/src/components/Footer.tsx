@@ -36,10 +36,11 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Support</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/faq" className="hover:text-primary">FAQ</Link></li>
-              <li><Link href="/contact" className="hover:text-primary">Contact Us</Link></li>
-              <li><Link href="/terms" className="hover:text-primary">Terms of Service</Link></li>
-              <li><Link href="/privacy" className="hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="/refund-policy" className="hover:text-primary transition-colors">Refund & Return Policy</Link></li>
+              <li><Link href="/shipping-policy" className="hover:text-primary transition-colors">Shipping Policy</Link></li>
+              <li><Link href="/contact-info" className="hover:text-primary transition-colors">Contact Information</Link></li>
             </ul>
           </div>
 
@@ -48,7 +49,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>support@examtestbank.com</span>
+                <span>support@examtestbank-us.com</span>
               </div>
               <p>Available 24/7 for your study needs.</p>
             </div>

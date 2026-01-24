@@ -5,6 +5,47 @@ import { z } from "zod";
 
 const app = new Hono();
 
+// Google Merchant Center XML Feed
+app.get("/feed.xml", async (c) => {
+    try {
+        const products = await storage.getProducts();
+        const baseUrl = "https://examtestbank-us.com"; // User should update this to their real domain
+
+        let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+<title>Exam Test Bank US</title>
+<link>${baseUrl}</link>
+<description>Premium quality nursing, medical, and business test banks.</description>
+`;
+
+        products.forEach(p => {
+            xml += `
+<item>
+<g:id>${p.id}</g:id>
+<g:title><![CDATA[${p.title}]]></g:title>
+<g:description><![CDATA[${p.shortDescription}]]></g:description>
+<g:link>${baseUrl}/product/${p.slug}</g:link>
+<g:image_link>${p.imageUrl}</g:image_link>
+<g:condition>new</g:condition>
+<g:availability>in stock</g:availability>
+<g:price>${p.price} USD</g:price>
+<g:brand>Exam Test Bank US</g:brand>
+<g:google_product_category>6171</g:google_product_category>
+</item>`;
+        });
+
+        xml += `
+</channel>
+</rss>`;
+
+        c.header("Content-Type", "application/xml");
+        return c.body(xml);
+    } catch (error) {
+        return c.json({ message: "Failed to generate feed" }, 500);
+    }
+});
+
 // API Routes (Ported from routes.ts)
 
 app.get(api.products.list.path, async (c) => {

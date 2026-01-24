@@ -16,6 +16,13 @@ import ProductDetail from "@/pages/ProductDetail";
 import Checkout from "@/pages/Checkout";
 import OrderConfirmation from "@/pages/OrderConfirmation";
 
+// Legal Pages
+import PrivacyPolicy from "@/pages/legal/PrivacyPolicy";
+import TermsOfService from "@/pages/legal/TermsOfService";
+import RefundPolicy from "@/pages/legal/RefundPolicy";
+import ShippingPolicy from "@/pages/legal/ShippingPolicy";
+import ContactInfo from "@/pages/legal/ContactInfo";
+
 // Admin Pages
 import AdminLogin from "@/pages/admin/Login";
 import AdminDashboard from "@/pages/admin/Dashboard";
@@ -55,6 +62,23 @@ function Router() {
       </Route>
       <Route path="/order-confirmation">
         {() => <PublicLayout><OrderConfirmation /></PublicLayout>}
+      </Route>
+
+      {/* Legal Routes */}
+      <Route path="/privacy-policy">
+        {() => <PublicLayout><PrivacyPolicy /></PublicLayout>}
+      </Route>
+      <Route path="/terms-of-service">
+        {() => <PublicLayout><TermsOfService /></PublicLayout>}
+      </Route>
+      <Route path="/refund-policy">
+        {() => <PublicLayout><RefundPolicy /></PublicLayout>}
+      </Route>
+      <Route path="/shipping-policy">
+        {() => <PublicLayout><ShippingPolicy /></PublicLayout>}
+      </Route>
+      <Route path="/contact-info">
+        {() => <PublicLayout><ContactInfo /></PublicLayout>}
       </Route>
 
       {/* Admin Routes - No PublicLayout (Header/Footer hidden) */}
