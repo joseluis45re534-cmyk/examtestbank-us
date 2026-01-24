@@ -20,13 +20,14 @@ export const onRequest = async (context: any) => {
 `;
 
         products.forEach(p => {
+            const imageUrl = (p.imageUrl || "").replace("studiazone.com", "studiazone-com-103170.hostingersite.com");
             xml += `
 <item>
 <g:id>${p.id}</g:id>
 <g:title><![CDATA[${p.title}]]></g:title>
 <g:description><![CDATA[${p.shortDescription}]]></g:description>
 <g:link>${baseUrl}/product/${p.slug}</g:link>
-<g:image_link>${p.imageUrl}</g:image_link>
+<g:image_link>${imageUrl}</g:image_link>
 <g:condition>new</g:condition>
 <g:availability>in stock</g:availability>
 <g:price>${p.price} USD</g:price>
