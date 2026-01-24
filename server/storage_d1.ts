@@ -7,7 +7,8 @@ import {
     type InsertContactMessage,
     type Order,
     type OrderItem,
-    type ContactMessage
+    type ContactMessage,
+    type Setting
 } from "@shared/schema";
 
 export class D1Storage implements IStorage {
@@ -150,6 +151,21 @@ export class D1Storage implements IStorage {
 
     async createContactMessage(message: InsertContactMessage): Promise<any> {
         return { success: true }; // Stub
+    }
+
+    // Settings (Tag Injection)
+    async getSettings(): Promise<Setting[]> {
+        const { results } = await this.db.prepare("SELECT * FROM settings").all();
+        return results;
+    }
+
+    async updateSetting(key: string, value: string): Promise<Setting> {
+        const { results } = await this.db.prepare(`
+            INSERT INTO settings (key, value) VALUES (?, ?)
+            ON CONFLICT(key) DO UPDATE SET value = excluded.value
+            RETURNING *
+        `).bind(key, value).all();
+        return results[0];
     }
 
     // Helper Mappers (Snake Case DB -> Camel Case JS)

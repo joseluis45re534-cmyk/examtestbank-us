@@ -8,7 +8,8 @@ import {
     type InsertContactMessage,
     type Order,
     type OrderItem,
-    type ContactMessage
+    type ContactMessage,
+    type Setting
 } from "@shared/schema";
 
 export class MemStorage implements IStorage {
@@ -18,6 +19,7 @@ export class MemStorage implements IStorage {
     private orders: Order[];
     private orderItems: OrderItem[];
     private contactMessages: ContactMessage[];
+    private settings: Setting[];
     private currentId: { [key: string]: number };
 
     constructor() {
@@ -28,6 +30,7 @@ export class MemStorage implements IStorage {
         this.orders = [];
         this.orderItems = [];
         this.contactMessages = [];
+        this.settings = [];
 
         this.seedData();
     }
@@ -123,9 +126,11 @@ export class MemStorage implements IStorage {
         const newProduct = { ...product, id };
         this.products.push(newProduct);
         return newProduct;
-    async updateProduct(id: number, productData: any): Promise < Product > {
-            const index = this.products.findIndex(p => p.id === id);
-            if(index === -1) throw new Error("Product not found");
+    }
+
+    async updateProduct(id: number, productData: any): Promise<Product> {
+        const index = this.products.findIndex(p => p.id === id);
+        if (index === -1) throw new Error("Product not found");
         this.products[index] = { ...this.products[index], ...productData };
         return this.products[index];
     }
@@ -193,5 +198,21 @@ export class MemStorage implements IStorage {
         const msg = { ...message, id: this.currentId.contactMessages++, createdAt: new Date() };
         this.contactMessages.push(msg as ContactMessage);
         return msg;
+    }
+
+    // Settings (Tag Injection)
+    async getSettings(): Promise<Setting[]> {
+        return this.settings;
+    }
+
+    async updateSetting(key: string, value: string): Promise<Setting> {
+        let setting = this.settings.find(s => s.key === key);
+        if (setting) {
+            setting.value = value;
+        } else {
+            setting = { key, value };
+            this.settings.push(setting);
+        }
+        return setting;
     }
 }

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { LayoutDashboard, Package, ShoppingCart, LogOut } from "lucide-react";
+import { LayoutDashboard, Package, ShoppingCart, Settings, LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -60,6 +60,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     <NavItem href="/admin" icon={LayoutDashboard} label="Dashboard" />
                     <NavItem href="/admin/products" icon={Package} label="Products" />
                     <NavItem href="/admin/orders" icon={ShoppingCart} label="Orders" />
+                    <NavItem href="/admin/settings" icon={Settings} label="Settings" />
                 </nav>
 
                 <div className="p-4 border-t">

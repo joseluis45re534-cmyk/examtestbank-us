@@ -66,6 +66,11 @@ export const contactMessages = pgTable("contact_messages", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+export const settings = pgTable("settings", {
+  key: text("key").primaryKey(),
+  value: text("value").notNull(),
+});
+
 // Relations
 export const productsRelations = relations(products, ({ one, many }) => ({
   category: one(categories, {
@@ -116,7 +121,10 @@ export type Review = typeof reviews.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type OrderItem = typeof orderItems.$inferSelect;
 export type ContactMessage = typeof contactMessages.$inferSelect;
+export type Setting = typeof settings.$inferSelect;
 
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type InsertOrder = z.infer<typeof insertOrderSchema>;
 export type InsertContactMessage = z.infer<typeof insertContactMessageSchema>;
+export const insertSettingSchema = createInsertSchema(settings);
+export type InsertSetting = z.infer<typeof insertSettingSchema>;

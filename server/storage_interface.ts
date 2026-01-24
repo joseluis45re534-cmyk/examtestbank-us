@@ -6,7 +6,8 @@ import {
     type InsertContactMessage,
     type Order,
     type OrderItem,
-    type ContactMessage
+    type ContactMessage,
+    type Setting
 } from "@shared/schema";
 
 export interface IStorage {
@@ -32,4 +33,8 @@ export interface IStorage {
 
     // Contact
     createContactMessage(message: InsertContactMessage): Promise<any>;
+
+    // Settings (Tag Injection)
+    getSettings(): Promise<Setting[]>;
+    updateSetting(key: string, value: string): Promise<Setting>;
 }

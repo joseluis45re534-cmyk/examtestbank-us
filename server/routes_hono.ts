@@ -110,6 +110,35 @@ app.get("/api/admin/orders", async (c) => {
     }
 });
 
+// Settings / Tag Injection
+app.get("/api/settings", async (c) => {
+    try {
+        const settings = await storage.getSettings();
+        // Convert to key-value object for easier consumption
+        const settingsObj = settings.reduce((acc: any, s) => {
+            acc[s.key] = s.value;
+            return acc;
+        }, {});
+        return c.json(settingsObj);
+    } catch (err) {
+        return c.json({ message: "Failed to fetch settings" }, 500);
+    }
+});
+
+app.patch("/api/settings", async (c) => {
+    try {
+        const body = await c.req.json();
+        const results = [];
+        for (const [key, value] of Object.entries(body)) {
+            const updated = await storage.updateSetting(key, value as string);
+            results.push(updated);
+        }
+        return c.json({ success: true, results });
+    } catch (err) {
+        return c.json({ message: "Failed to update settings" }, 500);
+    }
+});
+
 app.post(api.orders.create.path, async (c) => {
     try {
         const body = await c.req.json();
