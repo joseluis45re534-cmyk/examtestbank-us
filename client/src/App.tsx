@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartDrawer } from "@/components/CartDrawer";
-import { TagInjector } from "@/components/TagInjector";
 import NotFound from "@/pages/not-found";
 
 // Pages
@@ -33,7 +32,6 @@ import AdminSettings from "@/pages/admin/Settings";
 // Helper to wrap public pages with Header/Footer
 const PublicLayout = ({ children }: { children: React.ReactNode }) => (
   <>
-    <TagInjector />
     <Header />
     <main className="flex-grow">{children}</main>
     <Footer />
