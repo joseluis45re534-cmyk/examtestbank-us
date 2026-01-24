@@ -123,6 +123,11 @@ export class MemStorage implements IStorage {
         const newProduct = { ...product, id };
         this.products.push(newProduct);
         return newProduct;
+    async updateProduct(id: number, productData: any): Promise < Product > {
+            const index = this.products.findIndex(p => p.id === id);
+            if(index === -1) throw new Error("Product not found");
+        this.products[index] = { ...this.products[index], ...productData };
+        return this.products[index];
     }
 
     async deleteProduct(id: number): Promise<void> {

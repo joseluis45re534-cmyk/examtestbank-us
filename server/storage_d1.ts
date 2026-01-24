@@ -62,13 +62,34 @@ export class D1Storage implements IStorage {
         `).bind(
             product.title,
             product.slug,
-            product.shortDescription,
-            product.longDescription,
+            product.shortDescription || "",
+            product.longDescription || "",
             product.price,
             product.imageUrl,
             product.categoryId
         ).all();
 
+        return this.mapProduct(results[0]);
+    }
+
+    async updateProduct(id: number, product: any): Promise<Product> {
+        const { results } = await this.db.prepare(`
+            UPDATE products 
+            SET title = ?, slug = ?, short_description = ?, long_description = ?, price = ?, image_url = ?, category_id = ?
+            WHERE id = ?
+            RETURNING *
+        `).bind(
+            product.title,
+            product.slug,
+            product.shortDescription,
+            product.longDescription,
+            product.price,
+            product.imageUrl,
+            product.categoryId,
+            id
+        ).all();
+
+        if (!results || results.length === 0) throw new Error("Product not found");
         return this.mapProduct(results[0]);
     }
 

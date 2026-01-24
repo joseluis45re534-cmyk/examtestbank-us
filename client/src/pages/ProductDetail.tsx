@@ -48,13 +48,13 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             {/* Image Column */}
             <div className="md:col-span-5 lg:col-span-4">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="bg-white p-4 rounded-2xl shadow-lg border relative"
               >
-                <img 
-                  src={product.imageUrl} 
+                <img
+                  src={product.imageUrl}
                   alt={product.title}
                   className="w-full h-auto rounded-lg"
                 />
@@ -64,7 +64,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                   </Badge>
                 )}
               </motion.div>
-              
+
               <div className="mt-6 grid grid-cols-3 gap-4 text-center text-xs text-muted-foreground">
                 <div className="bg-white p-3 rounded-lg border">
                   <Download className="w-5 h-5 mx-auto mb-1 text-primary" />
@@ -94,7 +94,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                     </Badge>
                   )}
                 </div>
-                
+
                 <h1 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-4">
                   {product.title}
                 </h1>
@@ -131,16 +131,16 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="flex-1 btn-primary h-14 text-lg"
                     onClick={handleBuyNow}
                   >
                     Buy Now - Instant Download
                   </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
+                  <Button
+                    size="lg"
+                    variant="outline"
                     className="flex-1 h-14 text-lg border-2"
                     onClick={() => addItem(product)}
                   >
@@ -148,7 +148,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                     Add to Cart
                   </Button>
                 </div>
-                
+
                 <p className="text-center text-xs text-muted-foreground mt-4 flex items-center justify-center gap-1">
                   <AlertCircle className="w-3 h-3" />
                   Files are emailed immediately after purchase.
@@ -167,12 +167,12 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
             <TabsTrigger value="details">Product Details</TabsTrigger>
             <TabsTrigger value="reviews">Reviews ({reviews?.length || 0})</TabsTrigger>
           </TabsList>
-          
-          <TabsContent value="description" className="prose prose-slate max-w-none">
+
+          <TabsContent value="description" className="prose prose-slate max-w-none px-1">
             <h3 className="text-xl font-bold mb-4">About this Test Bank</h3>
-            <div dangerouslySetInnerHTML={{ __html: product.longDescription }} />
+            <p className="whitespace-pre-wrap text-slate-600 leading-relaxed">{product.longDescription}</p>
           </TabsContent>
-          
+
           <TabsContent value="details">
             <div className="bg-slate-50 p-6 rounded-xl border">
               <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
@@ -203,7 +203,7 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
               </dl>
             </div>
           </TabsContent>
-          
+
           <TabsContent value="reviews">
             <div className="space-y-6">
               {reviews?.map((review) => (

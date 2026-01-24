@@ -58,6 +58,17 @@ app.delete("/api/products/:id", async (c) => {
     }
 });
 
+app.patch("/api/products/:id", async (c) => {
+    try {
+        const id = c.req.param("id");
+        const body = await c.req.json();
+        const product = await storage.updateProduct(Number(id), body);
+        return c.json(product);
+    } catch (error) {
+        return c.json({ message: "Failed to update product" }, 500);
+    }
+});
+
 app.get(api.products.search.path, async (c) => {
     try {
         const q = c.req.query('q');
