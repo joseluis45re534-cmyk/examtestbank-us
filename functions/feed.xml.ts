@@ -26,7 +26,7 @@ export const onRequest = async (context: any) => {
 <g:title><![CDATA[${p.title}]]></g:title>
 <g:description><![CDATA[${p.shortDescription}]]></g:description>
 <g:link>${baseUrl}/product/${p.slug}</g:link>
-<g:image_link>${p.imageUrl}</g:image_link>
+<g:image_link>${p.imageUrl.startsWith("http") ? p.imageUrl : baseUrl + p.imageUrl}</g:image_link>
 <g:condition>new</g:condition>
 <g:availability>in stock</g:availability>
 <g:price>${p.price} USD</g:price>
