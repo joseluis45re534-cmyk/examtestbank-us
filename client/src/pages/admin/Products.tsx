@@ -11,6 +11,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
+import RichTextEditor from "@/components/ui/rich-text-editor";
+import DOMPurify from "dompurify";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Product } from "@shared/schema";
 
@@ -72,6 +74,7 @@ export default function AdminProducts() {
                 ...data,
                 price: data.price.toString(),
                 categoryId: parseInt(data.categoryId),
+                longDescription: DOMPurify.sanitize(data.longDescription),
                 slug: data.title.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
             };
 
@@ -243,12 +246,10 @@ export default function AdminProducts() {
                         </div>
 
                         <div className="space-y-2 md:col-span-2">
-                            <Label htmlFor="longDesc">Full Description (Supports newlines)</Label>
-                            <Textarea
-                                id="longDesc"
-                                className="h-32"
+                            <Label htmlFor="longDesc">Full Description (Supports Rich Text)</Label>
+                            <RichTextEditor
                                 value={formData.longDescription}
-                                onChange={e => setFormData({ ...formData, longDescription: e.target.value })}
+                                onChange={val => setFormData({ ...formData, longDescription: val })}
                                 placeholder="Detailed product information..."
                             />
                         </div>
