@@ -33,7 +33,7 @@ function extractTag(xml: string, tag: string): string {
 }
 
 async function run() {
-    const url = "https://studiazone-com-103170.hostingersite.com/wp-content/uploads/woo-feed/google_shopping_action/xml/forantygravity.xml";
+    const url = "https://studiazone.com/wp-content/uploads/woo-feed/google_shopping_action/xml/forantygravity.xml";
     console.log(`Fetching ${url}...`);
     const xmlContent = await fetchUrl(url);
 
