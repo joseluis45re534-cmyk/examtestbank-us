@@ -351,7 +351,7 @@ export default function Checkout() {
   }
 
   return (
-    <PayPalScriptProvider options={{ "client-id": "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkH" + "jHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD", components: "buttons" }}>
+    <PayPalScriptProvider options={{ clientId: "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkHjHYxHVEOD_OnBKbL8VJ1p56oc", currency: "USD", components: "buttons" }}>
       <div className="min-h-screen bg-slate-50 py-12">
         <div className="container-width">
           <h1 className="text-3xl font-bold mb-8 font-display">Checkout</h1>

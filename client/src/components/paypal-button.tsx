@@ -9,13 +9,21 @@ interface PayPalButtonProps {
 }
 
 export function PayPalPayment({ amount, onSuccess }: PayPalButtonProps) {
-    const [{ isPending, isResolved }] = usePayPalScriptReducer();
+    const [{ isPending, isRejected }] = usePayPalScriptReducer();
     const { toast } = useToast();
 
     if (isPending) {
         return <div className="flex justify-center p-4"><Loader2 className="animate-spin" /></div>;
     }
 
+    if (isRejected) {
+        return (
+            <div className="p-4 bg-red-50 text-red-600 rounded-md border border-red-200">
+                <p className="font-semibold">Failed to load PayPal</p>
+                <p className="text-sm">Please refresh the page or try another payment method.</p>
+            </div>
+        );
+    }
     return (
         <div className="w-full z-0 relative">
             <PayPalButtons
