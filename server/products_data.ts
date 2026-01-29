@@ -12,7 +12,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Wongs-Essentials-of-Pediatric-Nursing-10th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Wongs-Essentials-of-Pediatric-Nursing-10th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -31,7 +31,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "15th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Williams-Basic-Nutrition-and-Diet-Therapy-15th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Williams-Basic-Nutrition-and-Diet-Therapy-15th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -50,7 +50,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Wilkins-Clinical-Assessment-in-Respiratory-Care-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Wilkins-Clinical-Assessment-in-Respiratory-Care-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -69,7 +69,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Understanding-Nursing-Research-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Understanding-Nursing-Research-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -88,7 +88,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Touhy-Ebersole-Hess-Gerontological-Nursing-and-Healthy-Aging-2nd-Canadian-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Touhy-Ebersole-Hess-Gerontological-Nursing-and-Healthy-Aging-2nd-Canadian-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -107,7 +107,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/The-Muscular-System-Manual-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/The-Muscular-System-Manual-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -126,7 +126,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Davi",
     "edition": "11th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/The-Language-of-Medicine-11th-Edition-by-Davi-Ellen-Chabner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/The-Language-of-Medicine-11th-Edition-by-Davi-Ellen-Chabner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -145,7 +145,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/The-Human-Body-in-Health-and-Illness-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/The-Human-Body-in-Health-and-Illness-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -164,7 +164,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/The-Human-Body-in-Health-Disease-7th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/The-Human-Body-in-Health-Disease-7th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -183,7 +183,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Textbook-of-Diagnostic-Sonography-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Textbook-of-Diagnostic-Sonography-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -202,7 +202,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Textbook-of-Diagnostic-Microbiology-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Textbook-of-Diagnostic-Microbiology-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -221,7 +221,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Reva Arnez Curry Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Sonography-5th-Edition-by-Reva-Arnez-Curry-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Sonography-5th-Edition-by-Reva-Arnez-Curry-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -240,7 +240,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "11th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Radiologic-Science-for-Technologists-11th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Radiologic-Science-for-Technologists-11th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -259,7 +259,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Nina Kowalczyk Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Radiographic-Pathology-for-Technologists-7th-Edition-by-Nina-Kowalczyk-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Radiographic-Pathology-for-Technologists-7th-Edition-by-Nina-Kowalczyk-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -278,7 +278,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Peggy C. Leonard Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Quick-Easy-Medical-Terminology-8th-Edition-by-Peggy-C.-Leonard-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Quick-Easy-Medical-Terminology-8th-Edition-by-Peggy-C.-Leonard-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -297,7 +297,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Radiation-Protection-in-Medical-Radiography-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Radiation-Protection-in-Medical-Radiography-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -316,7 +316,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Marcia Stanhope Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Public-Health-Nursing-10th-Edition-by-Marcia-Stanhope-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Public-Health-Nursing-10th-Edition-by-Marcia-Stanhope-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -335,7 +335,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Norman L. Keltner Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Psychiatric-Nursing-8th-Edition-by-Norman-L.-Keltner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Psychiatric-Nursing-8th-Edition-by-Norman-L.-Keltner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -354,7 +354,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Beth Black Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Professional-Nursing-10th-Edition-by-Beth-Black-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Professional-Nursing-10th-Edition-by-Beth-Black-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -373,7 +373,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Terry Mahan Buttaro Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Primary-Care-6th-Edition-by-Terry-Mahan-Buttaro-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Primary-Care-6th-Edition-by-Terry-Mahan-Buttaro-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -392,7 +392,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Practice-Management-for-the-Dental-Team-9th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Practice-Management-for-the-Dental-Team-9th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -411,7 +411,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Potter-Canadian-Fundamentals-of-Nursing-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Potter-Canadian-Fundamentals-of-Nursing-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -430,7 +430,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Ruth Ann Ehrlich Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Patient-Care-in-Radiography-10th-Edition-by-Ruth-Ann-Ehrlich-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Patient-Care-in-Radiography-10th-Edition-by-Ruth-Ann-Ehrlich-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -449,7 +449,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Pagana-Mosbys-Canadian-Manual-of-Diagnostic-and-Laboratory-Tests-2nd-Canadian-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Pagana-Mosbys-Canadian-Manual-of-Diagnostic-and-Laboratory-Tests-2nd-Canadian-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -468,7 +468,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Olga A. C. Ibsen Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Oral-Pathology-for-the-Dental-Hygienist-7th-Edition-by-Olga-A.-C.-Ibsen-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Oral-Pathology-for-the-Dental-Hygienist-7th-Edition-by-Olga-A.-C.-Ibsen-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -487,7 +487,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "JoAnn Zerwekh Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Nursing-Today-10th-Edition-by-JoAnn-Zerwekh-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Nursing-Today-10th-Edition-by-JoAnn-Zerwekh-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -506,7 +506,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Nursing-Delegation-and-Management-of-Patient-Care-3rd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Nursing-Delegation-and-Management-of-Patient-Care-3rd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -525,7 +525,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Nuclear-Medicine-and-PETCT-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Nuclear-Medicine-and-PETCT-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -544,7 +544,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Neonatal-and-Pediatric-Respiratory-Care-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Neonatal-and-Pediatric-Respiratory-Care-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -563,7 +563,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Susan Turner Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Mulhollands-The-Nurse-The-Math-The-Meds-4th-Edition-by-Susan-Turner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Mulhollands-The-Nurse-The-Math-The-Meds-4th-Edition-by-Susan-Turner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -582,7 +582,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Susan G. Salvo Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Mosbys-Pathology-for-Massage-Therapists-4th-Edition-by-Susan-G.-Salvo-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Mosbys-Pathology-for-Massage-Therapists-4th-Edition-by-Susan-G.-Salvo-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -601,7 +601,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Mosbys-Canadian-Textbook-for-the-Support-Worker-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Mosbys-Canadian-Textbook-for-the-Support-Worker-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -620,7 +620,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "James Mizner Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Mosbys-Pharmacy-Technician-Exam-Review-4th-Edition-by-James-Mizner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Mosbys-Pharmacy-Technician-Exam-Review-4th-Edition-by-James-Mizner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -639,7 +639,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Doni L. Bird Test Bank",
     "edition": "12th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Modern-Dental-Assisting-12th-Edition-by-Doni-L.-Bird-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Modern-Dental-Assisting-12th-Edition-by-Doni-L.-Bird-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -658,7 +658,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Miller-Infection-Control-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Miller-Infection-Control-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -677,7 +677,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "14th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Merrills-Atlas-of-Radiographic-Positioning-and-Procedures-14th-Edition-by-Bruce-W.-Long-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Merrills-Atlas-of-Radiographic-Positioning-and-Procedures-14th-Edition-by-Bruce-W.-Long-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -696,7 +696,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Donna D. Ignatavicius Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Medical-Surgical-Nursing-10th-Edition-by-Donna-D.-Ignatavicius-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Medical-Surgical-Nursing-10th-Edition-by-Donna-D.-Ignatavicius-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -715,7 +715,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Davi",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Medical-Terminology-A-Short-Course-9th-Editionby-Davi-Ellen-Chabner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Medical-Terminology-A-Short-Course-9th-Editionby-Davi-Ellen-Chabner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -734,7 +734,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Betsy J. Shiland Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Medical-Terminology-Anatomy-for-Coding-3rd-Edition-by-Betsy-J.-Shiland-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Medical-Terminology-Anatomy-for-Coding-3rd-Edition-by-Betsy-J.-Shiland-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -753,7 +753,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/McCurnins-Clinical-Textbook-for-Veterinary-Technicians-9th-Edition-by-Joanna-M.-Bassert-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/McCurnins-Clinical-Textbook-for-Veterinary-Technicians-9th-Edition-by-Joanna-M.-Bassert-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -772,7 +772,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Betsy J. Shiland Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Mastering-Healthcare-Terminology-6th-Edition-by-Betsy-J.-Shiland-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Mastering-Healthcare-Terminology-6th-Edition-by-Betsy-J.-Shiland-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -791,7 +791,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Lora Claywell Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/LPN-to-RN-Transitions-4th-Edition-by-Lora-Claywell-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/LPN-to-RN-Transitions-4th-Edition-by-Lora-Claywell-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -810,7 +810,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Logothetis-Local-Anesthesia-for-the-Dental-Hygienist-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Logothetis-Local-Anesthesia-for-the-Dental-Hygienist-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -829,7 +829,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/LoBiondo-Wood-Nursing-Research-in-Canada-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/LoBiondo-Wood-Nursing-Research-in-Canada-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -848,7 +848,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Lewiss-Medical-Surgical-Nursing-5th-Edition-Diane-Brown-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Lewiss-Medical-Surgical-Nursing-5th-Edition-Diane-Brown-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -867,7 +867,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Lewis-Medical-Surgical-Nursing-in-Canada-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Lewis-Medical-Surgical-Nursing-in-Canada-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -886,7 +886,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Gloria Leifer Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Leifers-Introduction-to-Maternity-Pediatric-Nursing-in-Canada-by-Gloria-Leifer-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Leifers-Introduction-to-Maternity-Pediatric-Nursing-in-Canada-by-Gloria-Leifer-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -905,7 +905,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Margi Sirois Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Laboratory-Animal-and-Exotic-Pet-Medicine-3rd-Edition-by-Margi-Sirois-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Laboratory-Animal-and-Exotic-Pet-Medicine-3rd-Edition-by-Margi-Sirois-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -924,7 +924,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Mary Lou Sole Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Introduction-to-Critical-Care-Nursing-8th-Edition-by-Mary-Lou-Sole-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Introduction-to-Critical-Care-Nursing-8th-Edition-by-Mary-Lou-Sole-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -943,7 +943,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Interpersonal-Relationships-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Interpersonal-Relationships-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -962,7 +962,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Carole Lium Edelman Test Bank",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Health-Promotion-Throughout-the-Life-Span-9th-Edition-by-Carole-Lium-Edelman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Health-Promotion-Throughout-the-Life-Span-9th-Edition-by-Carole-Lium-Edelman-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -981,7 +981,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Susan F. Wilson Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Health-Assessment-for-Nursing-Practice-6th-Edition-by-Susan-F.-Wilson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Health-Assessment-for-Nursing-Practice-6th-Edition-by-Susan-F.-Wilson-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1000,7 +1000,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Valerie D. Thompson Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Health-and-Health-Care-Delivery-in-Canada-3rd-Edition-by-Valerie-D.-Thompson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Health-and-Health-Care-Delivery-in-Canada-3rd-Edition-by-Valerie-D.-Thompson-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1019,7 +1019,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Mary Fran Tracy Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Hamric-Hansons-Advanced-Practice-Nursing-7th-Edition-by-Mary-Fran-Tracy-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Hamric-Hansons-Advanced-Practice-Nursing-7th-Edition-by-Mary-Fran-Tracy-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1038,7 +1038,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "14th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Guyton-Hall-Textbook-of-Medical-Physiology-14th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Guyton-Hall-Textbook-of-Medical-Physiology-14th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1057,7 +1057,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "David D Celentano Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Gordis-Epidemiology-6th-Edition-by-David-D-Celentano-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Gordis-Epidemiology-6th-Edition-by-David-D-Celentano-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1076,7 +1076,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "15th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Fordneys-Medical-Insurance-15th-Edition-Linda-Smith-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Fordneys-Medical-Insurance-15th-Edition-Linda-Smith-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1095,7 +1095,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Ethics-and-Law-in-Dental-Hygiene-3rd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Ethics-and-Law-in-Dental-Hygiene-3rd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1114,7 +1114,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "James Johnston Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Essentials-of-Radiographic-Physics-and-Imaging-3rd-Edition-by-James-Johnston-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Essentials-of-Radiographic-Physics-and-Imaging-3rd-Edition-by-James-Johnston-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1133,7 +1133,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Margaret Schell Frazier Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Essentials-of-Human-Diseases-and-Conditions-7th-Edition-by-Margaret-Schell-Frazier-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Essentials-of-Human-Diseases-and-Conditions-7th-Edition-by-Margaret-Schell-Frazier-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1152,7 +1152,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Essentials-of-Cardiopulmonary-Physical-Therapy-4th-Edition-Ellen-Hillegass-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Essentials-of-Cardiopulmonary-Physical-Therapy-4th-Edition-Ellen-Hillegass-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1171,7 +1171,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/ECGs-Made-Easy-6th-Edition-Barbara-Aehlert-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/ECGs-Made-Easy-6th-Edition-Barbara-Aehlert-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1190,7 +1190,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Ann Tritak",
     "edition": "11th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Drug-Calculations-11th-Edition-by-Ann-Tritak-Elmiger-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Drug-Calculations-11th-Edition-by-Ann-Tritak-Elmiger-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1209,7 +1209,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Christi Carter Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Digital-Radiography-and-PACS-3rd-Edition-by-Christi-Carter-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Digital-Radiography-and-PACS-3rd-Edition-by-Christi-Carter-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1228,7 +1228,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Dental-Management-of-the-Medically-Compromised-Patient-9th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Dental-Management-of-the-Medically-Compromised-Patient-9th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1247,7 +1247,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Barbara Cherry Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Contemporary-Nursing-8th-Edition-by-Barbara-Cherry-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Contemporary-Nursing-8th-Edition-by-Barbara-Cherry-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1266,7 +1266,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Loren Stein Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Concept-Based-Clinical-Nursing-Skills-by-Loren-Stein-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Concept-Based-Clinical-Nursing-Skills-by-Loren-Stein-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1285,7 +1285,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Clinical-Manifestations-Assessment-of-Respiratory-Disease-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Clinical-Manifestations-Assessment-of-Respiratory-Disease-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1304,7 +1304,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Joyce LeFever Kee ch",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Clinical-Calculations-9th-Edition-by-Joyce-LeFever-Kee-ch7-17-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Clinical-Calculations-9th-Edition-by-Joyce-LeFever-Kee-ch7-17-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1323,7 +1323,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Applied-Pharmacology-for-the-Dental-Hygienist-9th-Edition-by-Elena-Bablenis-Haveles-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Applied-Pharmacology-for-the-Dental-Hygienist-9th-Edition-by-Elena-Bablenis-Haveles-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -1342,7 +1342,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Jane C. Rothrock Test Bank",
     "edition": "16th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/10/Alexanders-Care-of-the-Patient-in-Surgery-16th-Edition-by-Jane-C.-Rothrock-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/10/Alexanders-Care-of-the-Patient-in-Surgery-16th-Edition-by-Jane-C.-Rothrock-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1361,7 +1361,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Albert J. Heuer Test Bank",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Wilkins-Clinical-Assessment-in-Respiratory-Care-9th-Edition-by-Albert-J.-Heuer-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Wilkins-Clinical-Assessment-in-Respiratory-Care-9th-Edition-by-Albert-J.-Heuer-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1380,7 +1380,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Wheelers-Dental-Anatomy-Physiology-and-Occlusion-9th-Edition-Stanley-Nelson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Wheelers-Dental-Anatomy-Physiology-and-Occlusion-9th-Edition-Stanley-Nelson-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -1399,7 +1399,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Understanding-Pharmacology-Essentials-for-Medication-Safety-2nd-Edition-M.-Linda-Workman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Understanding-Pharmacology-Essentials-for-Medication-Safety-2nd-Edition-M.-Linda-Workman-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -1418,7 +1418,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Robert L. Nussbaum Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Thompson-Thompson-Genetics-in-Medicine-8th-Edition-by-Robert-L.-Nussbaum-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Thompson-Thompson-Genetics-in-Medicine-8th-Edition-by-Robert-L.-Nussbaum-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1437,7 +1437,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Barbara Herlihy Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/The-Human-Body-in-Health-and-Illness-7th-Edition-by-Barbara-Herlihy-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/The-Human-Body-in-Health-and-Illness-7th-Edition-by-Barbara-Herlihy-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1456,7 +1456,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Jane W. Ball Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Seidels-Guide-to-Physical-Examination-10th-Edition-by-Jane-W.-Ball-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Seidels-Guide-to-Physical-Examination-10th-Edition-by-Jane-W.-Ball-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1475,7 +1475,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Carl Mottram Test Bank",
     "edition": "11th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Ruppels-Manual-of-Pulmonary-Function-Testing-11th-Edition-by-Carl-Mottram-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Ruppels-Manual-of-Pulmonary-Function-Testing-11th-Edition-by-Carl-Mottram-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1494,7 +1494,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Bruce W. Long Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Radiography-Essentials-for-Limited-Practice-5th-Edition-by-Bruce-W.-Long-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Radiography-Essentials-for-Limited-Practice-5th-Edition-by-Bruce-W.-Long-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1513,7 +1513,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Nina Kowalczyk Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Radiographic-Pathology-for-Technologists-5th-Edition-by-Nina-Kowalczyk-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Radiographic-Pathology-for-Technologists-5th-Edition-by-Nina-Kowalczyk-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1532,7 +1532,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Terri L. Fauber Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Radiographic-Imaging-and-Exposure-6th-Edition-by-Terri-L.-Fauber-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Radiographic-Imaging-and-Exposure-6th-Edition-by-Terri-L.-Fauber-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1551,7 +1551,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Radiation-Protection-in-Medical-Radiography-9th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Radiation-Protection-in-Medical-Radiography-9th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1570,7 +1570,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Carolyn Jarvis Test Bank",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Physical-Examination-and-Health-Assessment-9th-Edition-by-Carolyn-Jarvis-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Physical-Examination-and-Health-Assessment-9th-Edition-by-Carolyn-Jarvis-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1589,7 +1589,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Carolyn Jarvis Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Physical-Examination-and-Health-Assessment-3rd-Edition-by-Carolyn-Jarvis-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Physical-Examination-and-Health-Assessment-3rd-Edition-by-Carolyn-Jarvis-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1608,7 +1608,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Robin S. Warekois Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Phlebotomy-5th-Edition-by-Robin-S.-Warekois-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Phlebotomy-5th-Edition-by-Robin-S.-Warekois-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1627,7 +1627,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-A-Patient-Centered-Nursing-Process-Approach-9th-Edition-Linda-McCuistion-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-A-Patient-Centered-Nursing-Process-Approach-9th-Edition-Linda-McCuistion-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -1646,7 +1646,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Jacquelyn L. Banasik Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pathophysiology-7th-Edition-by-Jacquelyn-L.-Banasik-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pathophysiology-7th-Edition-by-Jacquelyn-L.-Banasik-Test-Bank.webp",
     "tags": [
       "test-bank-pathophysiology"
     ],
@@ -1665,7 +1665,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "David J. Magee Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Orthopedic-Physical-Assessment-7th-Editionby-David-J.-Magee-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Orthopedic-Physical-Assessment-7th-Editionby-David-J.-Magee-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1684,7 +1684,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Michele Grod Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nutritional-Foundations-Clinical-Application-7th-Edition-by-Michele-Grod-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nutritional-Foundations-Clinical-Application-7th-Edition-by-Michele-Grod-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1703,7 +1703,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Mina Singh Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Research-in-Canada-5th-Editionby-Mina-Singh-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Research-in-Canada-5th-Editionby-Mina-Singh-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1722,7 +1722,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Care-of-Children-Principles-and-Practice-4th-Edition-Susan-James-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Care-of-Children-Principles-and-Practice-4th-Edition-Susan-James-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1741,7 +1741,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Laurie Lundy",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Neuroscience-6th-Edition-by-Laurie-Lundy-Ekman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Neuroscience-6th-Edition-by-Laurie-Lundy-Ekman-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1760,7 +1760,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Suzanne Tink Martin Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Neurologic-Interventions-for-Physical-Therapy-4th-Editionby-Suzanne-Tink-Martin-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Neurologic-Interventions-for-Physical-Therapy-4th-Editionby-Suzanne-Tink-Martin-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1779,7 +1779,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "William K. Ovalle Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Netters-Essential-Histology-3rd-Edition-by-William-K.-Ovalle-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Netters-Essential-Histology-3rd-Edition-by-William-K.-Ovalle-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1798,7 +1798,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Brian K. Walsh Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Neonatal-and-Pediatric-Respiratory-Care-6th-Edition-by-Brian-K.-Walsh-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Neonatal-and-Pediatric-Respiratory-Care-6th-Edition-by-Brian-K.-Walsh-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1817,7 +1817,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Clare Kostelnick Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Mosbys-Textbook-for-Long-Term-Care-Nursing-Assistants-8th-Edition-by-Clare-Kostelnick-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Mosbys-Textbook-for-Long-Term-Care-Nursing-Assistants-8th-Edition-by-Clare-Kostelnick-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1836,7 +1836,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Morrison-Valfres-Foundations-of-Mental-Health-Care-in-Canada-1st-Edition-Boris-Bard-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Morrison-Valfres-Foundations-of-Mental-Health-Care-in-Canada-1st-Edition-Boris-Bard-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1855,7 +1855,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Adrianne Dill Linton Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-Surgical-Nursing-8th-Editionby-Adrianne-Dill-Linton-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-Surgical-Nursing-8th-Editionby-Adrianne-Dill-Linton-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -1874,7 +1874,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Jane Tyerman Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-Surgical-Nursing-in-Canada-5th-Edition-by-Jane-Tyerman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-Surgical-Nursing-in-Canada-5th-Edition-by-Jane-Tyerman-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -1893,7 +1893,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Marcy O. Diehl Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-Transcription-7th-Editionby-Marcy-O.-Diehl-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-Transcription-7th-Editionby-Marcy-O.-Diehl-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1912,7 +1912,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "11th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/McDonald-and-Avery-Dentistry-for-the-Child-and-Adolescent-11th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/McDonald-and-Avery-Dentistry-for-the-Child-and-Adolescent-11th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1931,7 +1931,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Deitra Leonard Lowdermilk Test Bank",
     "edition": "12th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Maternity-and-Womens-Health-Care-12th-Edition-by-Deitra-Leonard-Lowdermilk-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Maternity-and-Womens-Health-Care-12th-Edition-by-Deitra-Leonard-Lowdermilk-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1950,7 +1950,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/LPN-to-RN-Transitions-5th-Edition-Lora-Claywell-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/LPN-to-RN-Transitions-5th-Edition-Lora-Claywell-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1969,7 +1969,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Local-Anesthesia-for-the-Dental-Hygienist-3rd-Edition-Demetra-Logothetis-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Local-Anesthesia-for-the-Dental-Hygienist-3rd-Edition-Demetra-Logothetis-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -1988,7 +1988,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Lilleys-Pharmacology-for-Canadian-Health-Care-Practice-4th-Edition-Kara-Sealock-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Lilleys-Pharmacology-for-Canadian-Health-Care-Practice-4th-Edition-Kara-Sealock-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -2007,7 +2007,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Legal-and-Ethical-Issues-for-Health-Professions-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Legal-and-Ethical-Issues-for-Health-Professions-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2026,7 +2026,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Niedzwiecki Test Bank",
     "edition": "14th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Kinns-The-Clinical-Medical-Assistant-14th-Edition-by-Niedzwiecki-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Kinns-The-Clinical-Medical-Assistant-14th-Edition-by-Niedzwiecki-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2045,7 +2045,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Mary Lou Sole Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Introduction-to-Critical-Care-Nursing-7th-Edition-by-Mary-Lou-Sole-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Introduction-to-Critical-Care-Nursing-7th-Edition-by-Mary-Lou-Sole-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2064,7 +2064,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Infection-Control-and-Management-of-Hazardous-Materials-for-the-Dental-Team-7e-TB.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Infection-Control-and-Management-of-Hazardous-Materials-for-the-Dental-Team-7e-TB.webp",
     "tags": [
       "test-bank"
     ],
@@ -2083,7 +2083,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Illustrated-Dental-Embryology-Histology-and-Anatomy-5th-Edition-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Illustrated-Dental-Embryology-Histology-and-Anatomy-5th-Edition-Test-Bank-1.webp",
     "tags": [
       "test-bank"
     ],
@@ -2102,7 +2102,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Margaret J. Fehrenbach Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Illustrated-Anatomy-of-the-Head-and-Neck-6th-Edition-by-Margaret-J.-Fehrenbach-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Illustrated-Anatomy-of-the-Head-and-Neck-6th-Edition-by-Margaret-J.-Fehrenbach-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -2121,7 +2121,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Iannucci-Dental-Radiography-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Iannucci-Dental-Radiography-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2140,7 +2140,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Health-Insurance-Today-A-Practical-Approach-6th-Edition-Beik-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Health-Insurance-Today-A-Practical-Approach-6th-Edition-Beik-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2159,7 +2159,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Ramona Nelson Test Bank",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Health-Informatics-2nd-Edition-by-Ramona-Nelson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Health-Informatics-2nd-Edition-by-Ramona-Nelson-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2178,7 +2178,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Susan Fickertt Wilson Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Health-Assessment-for-Nursing-Practice-7th-Edition-by-Susan-Fickertt-Wilson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Health-Assessment-for-Nursing-Practice-7th-Edition-by-Susan-Fickertt-Wilson-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2197,7 +2197,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "John E. Hall Test Bank",
     "edition": "13th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Guyton-Hall-Textbook-of-Medical-Physiology-13th-Edition-by-John-E.-Hall-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Guyton-Hall-Textbook-of-Medical-Physiology-13th-Edition-by-John-E.-Hall-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2216,7 +2216,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Gray-Morriss-Calculate-with-Confidence-2nd-Edition-Canadian-Edition-Tania-Killian-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Gray-Morriss-Calculate-with-Confidence-2nd-Edition-Canadian-Edition-Tania-Killian-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2235,7 +2235,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Gray-Morris-Calculate-with-Confidence-First-Canadian-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Gray-Morris-Calculate-with-Confidence-First-Canadian-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2254,7 +2254,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Catherine Goodman Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Goodman-and-Fullers-Pathology-5th-Editionby-Catherine-Goodman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Goodman-and-Fullers-Pathology-5th-Editionby-Catherine-Goodman-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2273,7 +2273,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Sue E. Meiner Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Gerontologic-Nursing-6th-Edition-by-Sue-E.-Meiner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Gerontologic-Nursing-6th-Edition-by-Sue-E.-Meiner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2292,7 +2292,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Gaylor-The-Administrative-Dental-Assistant-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Gaylor-The-Administrative-Dental-Assistant-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2311,7 +2311,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-of-Nursing-2nd-Edition-Barbara-Yoost-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-of-Nursing-2nd-Edition-Barbara-Yoost-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -2330,7 +2330,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Jeanine Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Frommers-Radiology-for-the-Dental-Professional-10th-Edition-by-Jeanine-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Frommers-Radiology-for-the-Dental-Professional-10th-Edition-by-Jeanine-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2349,7 +2349,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Michelle Morrison",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Foundations-of-Mental-Health-Care-8th-Edition-by-Michelle-Morrison-Valfre-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Foundations-of-Mental-Health-Care-8th-Edition-by-Michelle-Morrison-Valfre-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2368,7 +2368,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Michelle Morrison",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Foundations-of-Mental-Health-Care-7th-Edition-by-Michelle-Morrison-Valfre-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Foundations-of-Mental-Health-Care-7th-Edition-by-Michelle-Morrison-Valfre-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2387,7 +2387,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Sharon Smith Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Foundations-of-Maternal-Newborn-and-Womens-Health-Nursing-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Foundations-of-Maternal-Newborn-and-Womens-Health-Nursing-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-maternal-newborn-nursing"
     ],
@@ -2406,7 +2406,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Linda Smith Test Bank",
     "edition": "16th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fordneys-Medical-Insurance-and-Billing-16th-Edition-by-Linda-Smith-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fordneys-Medical-Insurance-and-Billing-16th-Edition-by-Linda-Smith-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2425,7 +2425,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Ethical-Legal-Issues-in-Canadian-Nursing-4th-Edition-Margaret-Keating-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Ethical-Legal-Issues-in-Canadian-Nursing-4th-Edition-Margaret-Keating-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2444,7 +2444,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Essentials-of-Psychiatric-Mental-Health-Nursing-3rd-Edition-Elizabeth-Varcarolis-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Essentials-of-Psychiatric-Mental-Health-Nursing-3rd-Edition-Elizabeth-Varcarolis-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2463,7 +2463,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Daniel J. Chiego Test Bank",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Essentials-of-Oral-Histology-and-Embryology-5th-Edition-by-Daniel-J.-Chiego-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Essentials-of-Oral-Histology-and-Embryology-5th-Edition-by-Daniel-J.-Chiego-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2482,7 +2482,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Shannon Dames Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Edelman-and-Kudzmas-Canadian-Health-Promotion-Throughout-the-Life-Span-by-Shannon-Dames-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Edelman-and-Kudzmas-Canadian-Health-Promotion-Throughout-the-Life-Span-by-Shannon-Dames-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2501,7 +2501,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Theris A. Touhy Test Bank",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Ebersole-and-Hess-Gerontological-Nursing-Healthy-Aging-6th-Edition-by-Theris-A.-Touhy-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Ebersole-and-Hess-Gerontological-Nursing-Healthy-Aging-6th-Edition-by-Theris-A.-Touhy-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2520,7 +2520,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Earlys-Physical-Dysfunction-Practice-Skills-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Earlys-Physical-Dysfunction-Practice-Skills-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2539,7 +2539,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Holly Stromberg Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/deWits-Medical-Surgical-Nursing-4th-Edition-by-Holly-Stromberg-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/deWits-Medical-Surgical-Nursing-4th-Edition-by-Holly-Stromberg-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -2558,7 +2558,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "W. Stephen Eakle Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Dental-Materials-4th-Edition-by-W.-Stephen-Eakle-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Dental-Materials-4th-Edition-by-W.-Stephen-Eakle-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2577,7 +2577,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "and Walsh Dental Hygiene",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Darby-and-Walsh-Dental-Hygiene-5th-Edition-by-Denise-M.-Bowen-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Darby-and-Walsh-Dental-Hygiene-5th-Edition-by-Denise-M.-Bowen-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2596,7 +2596,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Linda D. Urden Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Critical-Care-Nursing-8th-Edition-by-Linda-D.-Urden-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Critical-Care-Nursing-8th-Edition-by-Linda-D.-Urden-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2615,7 +2615,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "M. Robert deJong Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Craigs-Essentials-of-Sonography-and-Patient-Care-4th-Edition-by-M.-Robert-deJong-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Craigs-Essentials-of-Sonography-and-Patient-Care-4th-Edition-by-M.-Robert-deJong-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2634,7 +2634,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Elizabeth E. Friberg Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Conceptual-Foundations-7th-Edition-by-Elizabeth-E.-Friberg-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Conceptual-Foundations-7th-Edition-by-Elizabeth-E.-Friberg-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2653,7 +2653,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Mary A. Nies Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Community-Public-Health-Nursing-8th-Edition-by-Mary-A.-Nies-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Community-Public-Health-Nursing-8th-Edition-by-Mary-A.-Nies-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2672,7 +2672,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Community-Oral-Health-Practice-for-the-Dental-Hygienist-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Community-Oral-Health-Practice-for-the-Dental-Hygienist-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2691,7 +2691,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Community-Oral-Health-Practice-for-the-Dental-Hygienist-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Community-Oral-Health-Practice-for-the-Dental-Hygienist-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2710,7 +2710,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Sandra A. MacDonald Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Community-Health-Nursing-in-Canada-4th-Edition-by-Sandra-A.-MacDonald-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Community-Health-Nursing-in-Canada-4th-Edition-by-Sandra-A.-MacDonald-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2729,7 +2729,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Anne Griffin Perry Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Clinical-Nursing-Skills-and-Techniques-10th-Edition-by-Anne-Griffin-Perry-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Clinical-Nursing-Skills-and-Techniques-10th-Edition-by-Anne-Griffin-Perry-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2748,7 +2748,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Michelle Willihnganz Test Bank",
     "edition": "18th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Claytons-Basic-Pharmacology-for-Nurses-18th-Edition-by-Michelle-Willihnganz-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Claytons-Basic-Pharmacology-for-Nurses-18th-Edition-by-Michelle-Willihnganz-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -2767,7 +2767,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Case-Smiths-Occupational-Therapy-for-Children-and-Adolescents-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Case-Smiths-Occupational-Therapy-for-Children-and-Adolescents-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2786,7 +2786,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Anne Griffin Perry Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Canadian-Clinical-Nursing-Skills-and-Techniques-by-Anne-Griffin-Perry-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Canadian-Clinical-Nursing-Skills-and-Techniques-by-Anne-Griffin-Perry-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2805,7 +2805,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Deborah C. Morris Test Bank",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Calculate-with-Confidence-7th-Edition-by-Deborah-C.-Morris-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Calculate-with-Confidence-7th-Edition-by-Deborah-C.-Morris-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2824,7 +2824,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Peggy C. Leonard Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Building-a-Medical-Vocabulary-10th-Edition-by-Peggy-C.-Leonard-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Building-a-Medical-Vocabulary-10th-Edition-by-Peggy-C.-Leonard-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2843,7 +2843,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Bucks-Step-by-Step-Medical-Coding-2020-edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Bucks-Step-by-Step-Medical-Coding-2020-edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2862,7 +2862,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Brand-Anatomy-of-Orofacial-Structures-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Brand-Anatomy-of-Orofacial-Structures-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -2881,7 +2881,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "9th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Bontragers-Textbook-of-Radiographic-Positioning-and-Related-Anatomy-9e-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Bontragers-Textbook-of-Radiographic-Positioning-and-Related-Anatomy-9e-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2900,7 +2900,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Bontragers-Textbook-of-Radiographic-Positioning-and-Related-Anatomy-10th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Bontragers-Textbook-of-Radiographic-Positioning-and-Related-Anatomy-10th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2919,7 +2919,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Patricia A. Williams Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Basic-Geriatric-Nursing-8th-Edition-by-Patricia-A.-Williams-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Basic-Geriatric-Nursing-8th-Edition-by-Patricia-A.-Williams-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2938,7 +2938,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Patricia Tille Test Bank",
     "edition": "15th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Bailey-and-Scotts-Diagnostic-Microbiology-15th-Edition-by-Patricia-Tille-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Bailey-and-Scotts-Diagnostic-Microbiology-15th-Edition-by-Patricia-Tille-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -2957,7 +2957,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Elena Bablenis Haveles Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Applied-Pharmacology-for-the-Dental-Hygienist-8th-Edition-by-Elena-Bablenis-Haveles-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Applied-Pharmacology-for-the-Dental-Hygienist-8th-Edition-by-Elena-Bablenis-Haveles-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -2976,7 +2976,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Kevin T. Patton Test Bank",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Anatomy-Physiology-10th-Edition-by-Kevin-T.-Patton-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Anatomy-Physiology-10th-Edition-by-Kevin-T.-Patton-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -2995,7 +2995,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Kim Cooper Test Bank",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Adult-Health-Nursing-8th-Edition-by-Kim-Cooper-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Adult-Health-Nursing-8th-Edition-by-Kim-Cooper-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3014,7 +3014,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Lisa Keenan",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Accompany-Maternal-Child-Nursing-Care-Canadian-3rd-Edition-by-Lisa-Keenan-Lindsay-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Accompany-Maternal-Child-Nursing-Care-Canadian-3rd-Edition-by-Lisa-Keenan-Lindsay-Test-Bank.webp",
     "tags": [
       "test-bank-maternal-child-nursing"
     ],
@@ -3033,7 +3033,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Wright-Leaheys-Nurses-And-Families-7th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Wright-Leaheys-Nurses-And-Families-7th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3052,7 +3052,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Understanding-Anatomy-Physiology-3rd-Edition-Gale-Sloan-Thompson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Understanding-Anatomy-Physiology-3rd-Edition-Gale-Sloan-Thompson-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -3071,7 +3071,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Transcultural-Caring-Dynamics-In-Nursing-And-Health-Care-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Transcultural-Caring-Dynamics-In-Nursing-And-Health-Care-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3090,7 +3090,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Therapeutic-Exercise-Foundations-And-Techniques-7th-Edition-Carolyn-Kisner-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Therapeutic-Exercise-Foundations-And-Techniques-7th-Edition-Carolyn-Kisner-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3109,7 +3109,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/The-New-Leadership-Challenge-Creating-The-Future-Of-Nursing-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/The-New-Leadership-Challenge-Creating-The-Future-Of-Nursing-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3128,7 +3128,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/The-Intentional-Relationship-Occupational-Therapy-And-Use-Of-Self-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/The-Intentional-Relationship-Occupational-Therapy-And-Use-Of-Self-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3147,7 +3147,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Beth Boynton Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Successful-Nurse-Communication-Safe-Care-by-Beth-Boynton-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Successful-Nurse-Communication-Safe-Care-by-Beth-Boynton-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3166,7 +3166,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Sports-Nutrition-For-Health-Professionals-2nd-Edition-Natalie-Digate-Muth-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Sports-Nutrition-For-Health-Professionals-2nd-Edition-Natalie-Digate-Muth-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3185,7 +3185,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Safe-Maternity-Pediatric-Nursing-Care-2nd-Edition-Luanne-Linnard-palmer-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Safe-Maternity-Pediatric-Nursing-Care-2nd-Edition-Luanne-Linnard-palmer-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3204,7 +3204,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Safe-Maternity-Pediatric-Nursing-Care-Luanne-Linnard-palmer-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Safe-Maternity-Pediatric-Nursing-Care-Luanne-Linnard-palmer-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3223,7 +3223,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Reading-Understanding-And-Applying-Nursing-Research-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Reading-Understanding-And-Applying-Nursing-Research-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3242,7 +3242,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Public-Community-Health-And-Nursing-Practice-2nd-Edition-Christine-L.-Savage-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Public-Community-Health-And-Nursing-Practice-2nd-Edition-Christine-L.-Savage-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3261,7 +3261,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Phillipss-Manual-Of-I.v.-Therapeutics-7th-Edition-Test-Bank.png",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Phillipss-Manual-Of-I.v.-Therapeutics-7th-Edition-Test-Bank.png",
     "tags": [
       "test-bank"
     ],
@@ -3280,7 +3280,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Phillipss-Manual-Of-I.v.-Therapeutics-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Phillipss-Manual-Of-I.v.-Therapeutics-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3299,7 +3299,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pharmacotherapeutics-For-Advanced-Practice-Nurse-Prescribers-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pharmacotherapeutics-For-Advanced-Practice-Nurse-Prescribers-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3318,7 +3318,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-Clear-And-Simple-4th-Edition-Cynthia-J.-Watkins-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-Clear-And-Simple-4th-Edition-Cynthia-J.-Watkins-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -3337,7 +3337,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-In-Rehabilitation-5th-Edition-Charles-D.-Ciccone-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-In-Rehabilitation-5th-Edition-Charles-D.-Ciccone-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -3356,7 +3356,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-Clear-And-Simple-3rd-Edition-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pharmacology-Clear-And-Simple-3rd-Edition-Test-Bank-1.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -3375,7 +3375,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Theories-And-Nursing-Practice-5th-Edition-Marlaine-C.-Smith-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Theories-And-Nursing-Practice-5th-Edition-Marlaine-C.-Smith-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3394,7 +3394,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Occupational-Therapy-In-Mental-Health-A-Vision-For-Participation-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Occupational-Therapy-In-Mental-Health-A-Vision-For-Participation-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3413,7 +3413,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pediatric-Nursing-The-Critical-Components-Of-Nursing-Care-2nd-Edition-Rudd-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pediatric-Nursing-The-Critical-Components-Of-Nursing-Care-2nd-Edition-Rudd-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3432,7 +3432,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Now-Todays-Issues-Tomorrows-Trends-8th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Now-Todays-Issues-Tomorrows-Trends-8th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3451,7 +3451,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Leadership-Management-And-Professional-Practice-For-The-Lpn-lvn-6e-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Leadership-Management-And-Professional-Practice-For-The-Lpn-lvn-6e-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3470,7 +3470,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Leadership-And-Management-For-Patient-Safety-And-Quality-Care-Elizabeth-Murray-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Leadership-And-Management-For-Patient-Safety-And-Quality-Care-Elizabeth-Murray-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3489,7 +3489,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Neebs-Mental-Health-Nursing-5th-Edition-Linda-M.-Gorman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Neebs-Mental-Health-Nursing-5th-Edition-Linda-M.-Gorman-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3508,7 +3508,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Molecular-Diagnostics-3rd-Edition-Lela-Buckingham-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Molecular-Diagnostics-3rd-Edition-Lela-Buckingham-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3527,7 +3527,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Modern-Blood-Banking-Transfusion-Practices-7th-Edition-Test-Bank-.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Modern-Blood-Banking-Transfusion-Practices-7th-Edition-Test-Bank-.webp",
     "tags": [
       "test-bank"
     ],
@@ -3546,7 +3546,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Mobility-In-Context-Principles-Of-Patient-Care-Skills-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Mobility-In-Context-Principles-Of-Patient-Care-Skills-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3565,7 +3565,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Mental-Health-Nursing-6th-Edition-Linda-M.-Gorman-And-Robynn-Anwar-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Mental-Health-Nursing-6th-Edition-Linda-M.-Gorman-And-Robynn-Anwar-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3584,7 +3584,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-Terminology-Simplified-A-Programmed-Learning-Approach-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-Terminology-Simplified-A-Programmed-Learning-Approach-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3603,7 +3603,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-Terminology-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-Terminology-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3622,7 +3622,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-Parasitology-A-Self-instructional-Text-7th-Edition-Ruth-Leventhal-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-Parasitology-A-Self-instructional-Text-7th-Edition-Ruth-Leventhal-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3641,7 +3641,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Maternal-newborn-Nursing-The-Critical-Components-Of-Nursing-Care-3rd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Maternal-newborn-Nursing-The-Critical-Components-Of-Nursing-Care-3rd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-maternal-newborn-nursing"
     ],
@@ -3660,7 +3660,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Maternal-child-Nursing-Care-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Maternal-child-Nursing-Care-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-maternal-child-nursing"
     ],
@@ -3679,7 +3679,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Making-The-Transition-From-Lpn-To-Rn-Rose-Kearney-Nunnery-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Making-The-Transition-From-Lpn-To-Rn-Rose-Kearney-Nunnery-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3698,7 +3698,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Lutzs-Nutrition-And-Diet-Therapy-7th-Edition-Erin-E.-Mazur-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Lutzs-Nutrition-And-Diet-Therapy-7th-Edition-Erin-E.-Mazur-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3717,7 +3717,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Dennis Fell Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Lifespan-Neurorehabilitation-by-Dennis-Fell-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Lifespan-Neurorehabilitation-by-Dennis-Fell-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3736,7 +3736,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Kielhofners-Research-In-Occupational-Therapy-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Kielhofners-Research-In-Occupational-Therapy-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3755,7 +3755,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Journey-Across-The-Life-Span-Human-Development-And-Health-Promotion-7th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Journey-Across-The-Life-Span-Human-Development-And-Health-Promotion-7th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3774,7 +3774,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Journey-Across-The-Life-Span-Human-Development-And-Health-Promotion-6th-Edition-Elaine-U.-Polan-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Journey-Across-The-Life-Span-Human-Development-And-Health-Promotion-6th-Edition-Elaine-U.-Polan-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3793,7 +3793,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Genetics-And-Genomics-In-Nursing-And-Health-Care-2nd-Edition-Theresa-A.-Beery-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Genetics-And-Genomics-In-Nursing-And-Health-Care-2nd-Edition-Theresa-A.-Beery-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3812,7 +3812,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-Care-Concepts-Connections-Skills-3rd-Edtion-Marti-Burton-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-Care-Concepts-Connections-Skills-3rd-Edtion-Marti-Burton-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -3831,7 +3831,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Functional-Performance-In-Older-Adults-4th-Edition-Bette-R.-Bonder-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Functional-Performance-In-Older-Adults-4th-Edition-Bette-R.-Bonder-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3850,7 +3850,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Musculoskeletal-Imaging-5th-Edition-Lynn-N.-Mckinnis-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Musculoskeletal-Imaging-5th-Edition-Lynn-N.-Mckinnis-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3869,7 +3869,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Foundations-In-Kinesiology-And-Biomechanics-Vickie-Samuels-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Foundations-In-Kinesiology-And-Biomechanics-Vickie-Samuels-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3888,7 +3888,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Family-focused-Nursing-Care-Sharon-A.-Denham-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Family-focused-Nursing-Care-Sharon-A.-Denham-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3907,7 +3907,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Family-Health-Care-Nursing-Theory-Practice-And-Research-6th-Edition-Joanna-Rowe-Kaakinen-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Family-Health-Care-Nursing-Theory-Practice-And-Research-6th-Edition-Joanna-Rowe-Kaakinen-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3926,7 +3926,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Essentials-Of-Nursing-Leadership-Management-7th-Edition-Sally-A.-Weiss-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Essentials-Of-Nursing-Leadership-Management-7th-Edition-Sally-A.-Weiss-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3945,7 +3945,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "8th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Essentials-Of-Anatomy-And-Physiology-8th-Edition-Valerie-C.-Scanlon-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Essentials-Of-Anatomy-And-Physiology-8th-Edition-Valerie-C.-Scanlon-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -3964,7 +3964,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Essential-Health-Assessment-Janice-Thompson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Essential-Health-Assessment-Janice-Thompson-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -3983,7 +3983,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Documentation-For-Physical-Therapist-Assistants-5th-Edition-Wendy-D.-Bircher-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Documentation-For-Physical-Therapist-Assistants-5th-Edition-Wendy-D.-Bircher-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4002,7 +4002,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Dimensional-Analysis-Calculating-Dosages-Safely-2nd-Edition-Tracy-Horntvedt-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Dimensional-Analysis-Calculating-Dosages-Safely-2nd-Edition-Tracy-Horntvedt-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4021,7 +4021,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Differentiating-Surgical-Instruments-3rd-Edition-Colleen-J.-Rutherford-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Differentiating-Surgical-Instruments-3rd-Edition-Colleen-J.-Rutherford-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4040,7 +4040,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "16th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Daviss-Drug-Guide-For-Nurses-Canadian-Version-16th-Edition-April-Hazard-Vallerand-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Daviss-Drug-Guide-For-Nurses-Canadian-Version-16th-Edition-April-Hazard-Vallerand-Test-Bank-1.webp",
     "tags": [
       "test-bank"
     ],
@@ -4059,7 +4059,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Daviss-Drug-Guide-For-Nurses-17th-April-Hazard-Vallerand-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Daviss-Drug-Guide-For-Nurses-17th-April-Hazard-Vallerand-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4078,7 +4078,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "16th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Daviss-Drug-Guide-For-Nurses-16th-Edition-April-Hazard-Vallerand-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Daviss-Drug-Guide-For-Nurses-16th-Edition-April-Hazard-Vallerand-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4097,7 +4097,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Daviss-Nursing-Skills-Videos-online-Streaming-Judith-M.-Wilkinson-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Daviss-Nursing-Skills-Videos-online-Streaming-Judith-M.-Wilkinson-Test-Bank-1.webp",
     "tags": [
       "test-bank"
     ],
@@ -4116,7 +4116,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "15th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Daviss-Canadian-Drug-Guide-For-Nurses-15th-Edition-April-Hazard-Vallerand-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Daviss-Canadian-Drug-Guide-For-Nurses-15th-Edition-April-Hazard-Vallerand-Test-Bank-1.webp",
     "tags": [
       "test-bank"
     ],
@@ -4135,7 +4135,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Understanding-Medical-surgical-Nursing-7th-Edition-Linda-S.-Williams-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Understanding-Medical-surgical-Nursing-7th-Edition-Linda-S.-Williams-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -4154,7 +4154,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "10th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Psychiatric-Mental-Health-Nursing-10th-Edition-Karyn-I.-Morgan-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Psychiatric-Mental-Health-Nursing-10th-Edition-Karyn-I.-Morgan-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4173,7 +4173,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pathophysiology-Introductory-Concepts-And-Clinical-Perspectives-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pathophysiology-Introductory-Concepts-And-Clinical-Perspectives-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-pathophysiology"
     ],
@@ -4192,7 +4192,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Medical-surgical-Nursing-Making-Connections-To-Practice-2nd-Edition-Hoffman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Medical-surgical-Nursing-Making-Connections-To-Practice-2nd-Edition-Hoffman-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -4211,7 +4211,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Medical-surgical-Nursing-Making-Connections-To-Practice-Hoffman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Medical-surgical-Nursing-Making-Connections-To-Practice-Hoffman-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -4230,7 +4230,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Maternal-child-Nursing-Care-3rd-Edition-Meredith-J-Scannell-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Maternal-child-Nursing-Care-3rd-Edition-Meredith-J-Scannell-Test-Bank.webp",
     "tags": [
       "test-bank-maternal-child-nursing"
     ],
@@ -4249,7 +4249,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-Care-Concepts-Connections-Skills-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-Care-Concepts-Connections-Skills-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -4268,7 +4268,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Judith M. Wilkinson Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-2-Volume-Set-4th-Edition-by-Judith-M.-Wilkinson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-2-Volume-Set-4th-Edition-by-Judith-M.-Wilkinson-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -4287,7 +4287,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Basic-Nursing-Thinking-Doing-And-Caring-2nd-Edition-Leslie-S.-Treas-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Davis-Advantage-For-Basic-Nursing-Thinking-Doing-And-Caring-2nd-Edition-Leslie-S.-Treas-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4306,7 +4306,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Clinical-Immunology-And-Serology-A-Laboratory-Perspective-4th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Clinical-Immunology-And-Serology-A-Laboratory-Perspective-4th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4325,7 +4325,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Caring-For-Older-Adults-Holistically-7th-Edition-Tamara-R.-Dahlkemper-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Caring-For-Older-Adults-Holistically-7th-Edition-Tamara-R.-Dahlkemper-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4344,7 +4344,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Calculating-Drug-Dosages-2nd-Edition-Sandra-Luz-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Calculating-Drug-Dosages-2nd-Edition-Sandra-Luz-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4363,7 +4363,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Andersons-Nursing-Leadership-Management-5e-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Andersons-Nursing-Leadership-Management-5e-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4382,7 +4382,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Advancing-Your-Career-Concepts-Of-Professional-Nursing-7th-Edition-Rose-Kearney-Nunnery-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Advancing-Your-Career-Concepts-Of-Professional-Nursing-7th-Edition-Rose-Kearney-Nunnery-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4401,7 +4401,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Advanced-Practice-Nursing-In-The-Care-Of-Older-Adults-2nd-Edition-Laurie-Kennedy-malone-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Advanced-Practice-Nursing-In-The-Care-Of-Older-Adults-2nd-Edition-Laurie-Kennedy-malone-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4420,7 +4420,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Test Bank",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Advanced-Assessment-4th-Edition-Goolsby-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Advanced-Assessment-4th-Edition-Goolsby-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4439,7 +4439,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Urinalysis-And-Body-Fluids-6th-Edition-Susan-King-Strasinger-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Urinalysis-And-Body-Fluids-6th-Edition-Susan-King-Strasinger-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4458,7 +4458,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Understanding-Medical-surgical-Nursing-6th-Edition-Linda-S.-Williams-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Understanding-Medical-surgical-Nursing-6th-Edition-Linda-S.-Williams-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -4477,7 +4477,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Understanding-Medical-surgical-Nursing-5th-Edition-Linda-S.-Williams-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Understanding-Medical-surgical-Nursing-5th-Edition-Linda-S.-Williams-Test-Bank.webp",
     "tags": [
       "test-bank-medical-surgical-nursing"
     ],
@@ -4496,7 +4496,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Understanding-Anatomy-Physiology-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Understanding-Anatomy-Physiology-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -4515,7 +4515,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/The-Nurses-Role-In-Promoting-Optimal-Health-Of-Older-Adults-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/The-Nurses-Role-In-Promoting-Optimal-Health-Of-Older-Adults-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4534,7 +4534,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Structures-Of-The-Head-And-Neck-Frank-J.-Weaker-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Structures-Of-The-Head-And-Neck-Frank-J.-Weaker-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4553,7 +4553,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Public-Health-Science-And-Nursing-Practice-Caring-For-Populations-Christine-L.-Savage-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Public-Health-Science-And-Nursing-Practice-Caring-For-Populations-Christine-L.-Savage-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4572,7 +4572,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Psychiatric-Advanced-Practice-Nursing-A-Biopsychosocial-Foundation-For-Practice-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Psychiatric-Advanced-Practice-Nursing-A-Biopsychosocial-Foundation-For-Practice-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4591,7 +4591,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Primary-Care-Art-And-Science-Of-Advanced-Practice-Nursing-4th-Edition-Lynne-M.-Dunphy-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Primary-Care-Art-And-Science-Of-Advanced-Practice-Nursing-4th-Edition-Lynne-M.-Dunphy-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4610,7 +4610,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Practical-Radiology-A-Symptom-based-Approach-Edward-C.-Weber-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Practical-Radiology-A-Symptom-based-Approach-Edward-C.-Weber-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4629,7 +4629,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Phillipss-Manual-Of-I.v.-Therapeutics-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Phillipss-Manual-Of-I.v.-Therapeutics-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4648,7 +4648,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Patient-centered-Pharmacology-Learning-System-For-The-Conscientious-Prescriber-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Patient-centered-Pharmacology-Learning-System-For-The-Conscientious-Prescriber-Test-Bank.webp",
     "tags": [
       "test-bank-pharmacology"
     ],
@@ -4667,7 +4667,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Theories-And-Nursing-Practice-4th-Edition-Marlaine-Smith-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Theories-And-Nursing-Practice-4th-Edition-Marlaine-Smith-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4686,7 +4686,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Nursing-Now-Todays-Issues-Tomorrows-Trends-7th-Edition-Joseph-T.-Catalano-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Nursing-Now-Todays-Issues-Tomorrows-Trends-7th-Edition-Joseph-T.-Catalano-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4705,7 +4705,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Modern-Blood-Banking-Transfusion-Practices-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Modern-Blood-Banking-Transfusion-Practices-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4724,7 +4724,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "4th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Neebs-Fundamentals-Of-Mental-Health-Nursing-4th-Edition-Linda-M.-Gorman-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Neebs-Fundamentals-Of-Mental-Health-Nursing-4th-Edition-Linda-M.-Gorman-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -4743,7 +4743,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "2nd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Maternal-newborn-Nursing-The-Critical-Components-Of-Nursing-Care-2nd-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Maternal-newborn-Nursing-The-Critical-Components-Of-Nursing-Care-2nd-Edition-Test-Bank.webp",
     "tags": [
       "test-bank-maternal-newborn-nursing"
     ],
@@ -4762,7 +4762,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "5th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Journey-Across-The-Life-Span-5th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Journey-Across-The-Life-Span-5th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4781,7 +4781,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Interpersonal-Skills-For-Healthcare-Providers-Instructor-Version-Cynthia-Diefenbeck-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Interpersonal-Skills-For-Healthcare-Providers-Instructor-Version-Cynthia-Diefenbeck-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4800,7 +4800,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-two-Volume-Set-3rd-Edition-Judith-M.-Wilkinson-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Fundamentals-Of-Nursing-two-Volume-Set-3rd-Edition-Judith-M.-Wilkinson-Test-Bank.webp",
     "tags": [
       "test-bank-fundamentals-of-nursing"
     ],
@@ -4819,7 +4819,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Forensic-Nursing-Evidence-based-Principles-And-Practice-Rose-E.-Constantino-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Forensic-Nursing-Evidence-based-Principles-And-Practice-Rose-E.-Constantino-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4838,7 +4838,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "7th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Essentials-Of-Anatomy-And-Physiology-7th-Edition-Valerie-C.-Scanlon-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Essentials-Of-Anatomy-And-Physiology-7th-Edition-Valerie-C.-Scanlon-Test-Bank.webp",
     "tags": [
       "test-bank-anatomy"
     ],
@@ -4857,7 +4857,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Pathophysiology-Introductory-Concepts-And-Clinical-Perspectives-Theresa-Capriotti-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Pathophysiology-Introductory-Concepts-And-Clinical-Perspectives-Theresa-Capriotti-Test-Bank.webp",
     "tags": [
       "test-bank-pathophysiology"
     ],
@@ -4876,7 +4876,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Pamela Mchugh Schuster Test Bank",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Communication-For-Nurses-by-Pamela-Mchugh-Schuster-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Communication-For-Nurses-by-Pamela-Mchugh-Schuster-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4895,7 +4895,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Calculating-Drug-Dosages-A-Patient-safe-Approach-To-Nursing-And-Math-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Calculating-Drug-Dosages-A-Patient-safe-Approach-To-Nursing-And-Math-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4914,7 +4914,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Assessment-Of-The-School-age-Child-And-Adolescent-Margaret-R.-Colyar-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Assessment-Of-The-School-age-Child-And-Adolescent-Margaret-R.-Colyar-Test-Bank-1.webp",
     "tags": [
       "test-bank"
     ],
@@ -4933,7 +4933,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Anatomy-Physiology-in-a-Flash-An-Interactive-Flash-Card-Approach-Test-Bank-2.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Anatomy-Physiology-in-a-Flash-An-Interactive-Flash-Card-Approach-Test-Bank-2.webp",
     "tags": [
       "test-bank"
     ],
@@ -4952,7 +4952,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "6th Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Advancing-Your-Career-Concepts-of-Professional-Nursing-6th-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Advancing-Your-Career-Concepts-of-Professional-Nursing-6th-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4971,7 +4971,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Unknown",
     "edition": "1st Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Advanced-Practice-Nursing-of-Adults-in-Acute-Care-1st-Edition-Test-Bank.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Advanced-Practice-Nursing-of-Adults-in-Acute-Care-1st-Edition-Test-Bank.webp",
     "tags": [
       "test-bank"
     ],
@@ -4990,7 +4990,7 @@ export const importedProducts: Omit<Product, "id" | "categoryId">[] = [
     "author": "Test Bank",
     "edition": "3rd Edition",
     "year": 2024,
-    "imageUrl": "https://studiazone.com/wp-content/uploads/2023/09/Advanced-Assessment-3rd-Edition-Mary-Jo-Goolsby-Test-Bank-1.webp",
+    "imageUrl": "/image_proxy?url=https://studiazone.com/wp-content/uploads/2023/09/Advanced-Assessment-3rd-Edition-Mary-Jo-Goolsby-Test-Bank-1.webp",
     "tags": [
       "test-bank"
     ],

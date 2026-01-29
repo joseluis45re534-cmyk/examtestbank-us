@@ -11,6 +11,42 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   // API Routes
+  app.get("/image_proxy", async (req, res) => {
+    const imageUrl = req.query.url as string;
+
+    if (!imageUrl) {
+      res.status(400).send("Missing url parameter");
+      return;
+    }
+
+    try {
+      const imageResponse = await fetch(imageUrl, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+          "Referer": "https://studiazone.com/"
+        }
+      });
+
+      if (!imageResponse.ok) {
+        res.status(imageResponse.status).send(`Failed to fetch image: ${imageResponse.statusText}`);
+        return;
+      }
+
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+
+      const contentType = imageResponse.headers.get("content-type");
+      if (contentType) {
+        res.setHeader("Content-Type", contentType);
+      }
+
+      const buffer = await imageResponse.arrayBuffer();
+      res.send(Buffer.from(buffer));
+    } catch (error) {
+      res.status(500).send(`Error fetching image: ${(error as Error).message}`);
+    }
+  });
+
   app.get(api.products.list.path, async (req, res) => {
     try {
       const { category, search, limit, featured } = req.query;

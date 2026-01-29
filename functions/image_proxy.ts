@@ -1,4 +1,4 @@
-export const onRequest: PagesFunction = async (context) => {
+export const onRequest = async (context: any) => {
     const url = new URL(context.request.url);
     const imageUrl = url.searchParams.get("url");
 
@@ -27,7 +27,7 @@ export const onRequest: PagesFunction = async (context) => {
             status: 200,
             headers: headers
         });
-    } catch (error) {
+    } catch (error: any) {
         return new Response(`Error fetching image: ${error.message}`, { status: 500 });
     }
 };
