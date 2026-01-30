@@ -135,8 +135,16 @@ export async function registerRoutes(
     try {
       const { amount, currency = "usd" } = req.body;
 
-      // Use hardcoded key from Hono implementation if env var is missing
-      const apiKey = process.env.STRIPE_SECRET_KEY || "sk_test_" + "51SpzmQR6degPKw4yQKa5xJ4Rc8SYEpeIA6ufuMSHZPc28v63I8Dmhi9dIZSJXKTYWuPeJ7o63eBOkM8ZLIdWousz00CS5Nzy3y";
+      // Retrieve Stripe API key from environment variables
+      const apiKey = process.env.STRIPE_SECRET_KEY;
+
+      if (!apiKey) {
+        console.warn("No STRIPE_SECRET_KEY found. Mocking payment intent.");
+        return res.json({
+          clientSecret: "mock_secret_" + Date.now(),
+          mock: true
+        });
+      }
 
       const Stripe = (await import("stripe")).default;
       const stripe = new Stripe(apiKey, {
@@ -159,9 +167,13 @@ export async function registerRoutes(
   });
 
   // PayPal Config
-  const PAYPAL_CLIENT_ID = "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkHjHYxHVEOD_OnBKbL8" + "VJ1p56oc";
-  const PAYPAL_CLIENT_SECRET = "EL_yvlMLloOSowiCXoq4hVyBmReFmOcsaxzKrXOB1KrhpiRCvLAej7FhY2oNubB3z807LF0" + "Z7TiSVCd0";
-  const PAYPAL_API = "https://api-m.sandbox.paypal.com";
+  const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID;
+  const PAYPAL_CLIENT_SECRET = process.env.PAYPAL_CLIENT_SECRET;
+  const PAYPAL_API = process.env.PAYPAL_API_URL || "https://api-m.sandbox.paypal.com";
+
+  if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
+    console.warn("PayPal keys missing from environment variables.");
+  }
 
   async function getPayPalAccessToken() {
     const auth = btoa(`${PAYPAL_CLIENT_ID}:${PAYPAL_CLIENT_SECRET}`);

@@ -216,7 +216,7 @@ app.post("/api/create-payment-intent", async (c) => {
         const { amount, currency = "usd" } = await c.req.json();
 
         // Robust Env Access for hybrid Edge/Node environments
-        let apiKey = "sk_test_" + "51SpzmQR6degPKw4yQKa5xJ4Rc8SYEpeIA6ufuMSHZPc28v63I8Dmhi9dIZSJXKTYWuPeJ7o63eBOkM8ZLIdWousz00CS5Nzy3y";
+        let apiKey = "";
         try {
             // @ts-ignore
             if (c.env && c.env.STRIPE_SECRET_KEY) apiKey = c.env.STRIPE_SECRET_KEY;
@@ -256,8 +256,9 @@ app.post("/api/create-payment-intent", async (c) => {
 
 // PayPal Config
 // NOTE: We will obfuscate these before pushing to bypass GitHub secret scanning
-const PAYPAL_CLIENT_ID = "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkHjHYxHVEOD_OnBKbL8" + "VJ1p56oc";
-const PAYPAL_CLIENT_SECRET = "EL_yvlMLloOSowiCXoq4hVyBmReFmOcsaxzKrXOB1KrhpiRCvLAej7FhY2oNubB3z807LF0" + "Z7TiSVCd0";
+// NOTE: We will obfuscate these before pushing to bypass GitHub secret scanning
+const PAYPAL_CLIENT_ID = ""; // Set via environment variables in Cloudflare
+const PAYPAL_CLIENT_SECRET = ""; // Set via environment variables in Cloudflare
 const PAYPAL_API = "https://api-m.sandbox.paypal.com";
 
 async function getPayPalAccessToken() {
