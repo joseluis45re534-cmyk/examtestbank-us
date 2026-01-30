@@ -16,7 +16,6 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { stripePromise } from "@/lib/stripe";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { PayPalPayment } from "@/components/paypal-button";
 import { ErrorBoundary } from "@/components/error-boundary";
 
@@ -351,7 +350,7 @@ export default function Checkout() {
   }
 
   return (
-    <PayPalScriptProvider options={{ clientId: "ED1e8sifTjfUSv9bwp3Y7fZwiNmivda9UznpliNaHdNWD8yXGrC9zPXKfbh9ciL8n6PojjK8WYvDPfcR", currency: "USD", components: "buttons" }}>
+    <>
       <div className="min-h-screen bg-slate-50 py-12">
         <div className="container-width">
           <h1 className="text-3xl font-bold mb-8 font-display">Checkout</h1>
@@ -376,6 +375,6 @@ export default function Checkout() {
           )}
         </div>
       </div>
-    </PayPalScriptProvider>
+    </>
   );
 }
