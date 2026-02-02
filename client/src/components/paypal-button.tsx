@@ -17,6 +17,7 @@ export function PayPalPayment({ amount, onSuccess }: PayPalButtonProps) {
     }
 
     if (isRejected) {
+        console.error("PayPal Script Load Failed. Check Client ID and network.");
         return (
             <div className="p-4 bg-red-50 text-red-600 rounded-md border border-red-200">
                 <p className="font-semibold">Failed to load PayPal</p>

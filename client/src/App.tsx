@@ -93,12 +93,13 @@ function Router() {
   );
 }
 
+const initialPayPalOptions = {
+  clientId: "ED1e8sifTjfUSv9bwp3Y7fZwiNmivda9UznpliNaHdNWD8yXGrC9zPXKfbh9ciL8n6PojjK8WYvDPfcR",
+  currency: "USD",
+  components: "buttons",
+};
+
 function App() {
-  const initialPayPalOptions = {
-    clientId: "ED1e8sifTjfUSv9bwp3Y7fZwiNmivda9UznpliNaHdNWD8yXGrC9zPXKfbh9ciL8n6PojjK8WYvDPfcR",
-    currency: "USD",
-    components: "buttons",
-  };
 
   return (
     <QueryClientProvider client={queryClient}>
