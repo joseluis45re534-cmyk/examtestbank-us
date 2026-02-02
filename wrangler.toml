@@ -4,6 +4,7 @@ pages_build_output_dir = "dist/public"
 
 [vars]
 VITE_STRIPE_PUBLISHABLE_KEY = "pk_test_51SmUtnHL8Re8eVeSvI60MBhhzJ2PXlaGZoR3sDfSkpwDf9ulQ8cLcDIn5LhTfVDE2KDhRqN9cHovcdWCGLL7wXNf00aLZnJyEL"
+# STRIPE_SECRET_KEY must be added in Cloudflare Dashboard -> Settings -> Variables
 # NODE_ENV = "production" # Optional
 [[d1_databases]]
 binding = "DB"
