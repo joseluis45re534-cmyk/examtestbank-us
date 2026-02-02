@@ -243,7 +243,6 @@ export async function registerRoutes(
     }
   });
 
-  // Seed Data function
   if (process.env.DATABASE_URL) {
     await seedDatabase();
   }

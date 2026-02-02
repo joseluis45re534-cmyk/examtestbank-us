@@ -244,7 +244,6 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
           <ErrorBoundary>
             <div className="p-4 border rounded-md bg-gray-50">
               <h3 className="text-center mb-4 font-semibold text-gray-700">Pay with PayPal</h3>
-              {/* Provider moved to root, so we just render button here */}
               <PayPalPayment
                 amount={total()}
                 onSuccess={(details) => {
