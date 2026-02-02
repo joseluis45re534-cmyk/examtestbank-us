@@ -53,7 +53,13 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
       const result = await stripe.confirmPayment({
         elements,
         confirmParams: {
-          return_url: window.location.origin + "/order-confirmation", // Mock return URL
+          return_url: window.location.origin + "/order-confirmation",
+          payment_method_data: {
+            billing_details: {
+              name: `${data.firstName} ${data.lastName}`,
+              email: data.email,
+            },
+          },
         },
         redirect: "if_required",
       });
