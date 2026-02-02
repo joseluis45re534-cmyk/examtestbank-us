@@ -77,6 +77,7 @@ export const api = {
       method: "POST" as const,
       path: "/api/orders",
       input: insertOrderSchema.extend({
+        totalAmount: z.union([z.string(), z.number()]).transform((val) => val.toString()),
         items: z.array(z.object({
           productId: z.number(),
           quantity: z.number().default(1),

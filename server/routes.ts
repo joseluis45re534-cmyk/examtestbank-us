@@ -102,6 +102,7 @@ export async function registerRoutes(
 
   app.post(api.orders.create.path, async (req, res) => {
     try {
+      console.log("Create Order Body:", JSON.stringify(req.body, null, 2));
       const input = api.orders.create.input.parse(req.body);
       const order = await storage.createOrder(input);
       res.status(201).json(order);
@@ -162,83 +163,6 @@ export async function registerRoutes(
       res.json({ clientSecret: paymentIntent.client_secret });
     } catch (error: any) {
       console.error("Stripe error:", error);
-      res.status(500).json({ message: error.message });
-    }
-  });
-
-  // PayPal Config
-  const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID;
-  const PAYPAL_CLIENT_SECRET = process.env.PAYPAL_CLIENT_SECRET;
-  const PAYPAL_API = process.env.PAYPAL_API_URL || "https://api-m.sandbox.paypal.com";
-
-  if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
-    console.warn("PayPal keys missing from environment variables.");
-  }
-
-  async function getPayPalAccessToken() {
-    const auth = btoa(`${PAYPAL_CLIENT_ID}:${PAYPAL_CLIENT_SECRET}`);
-    const response = await fetch(`${PAYPAL_API}/v1/oauth2/token`, {
-      method: "POST",
-      body: "grant_type=client_credentials",
-      headers: {
-        Authorization: `Basic ${auth}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-    const data = await response.json();
-    return (data as any).access_token;
-  }
-
-  // PayPal Routes
-  app.post("/api/create-paypal-order", async (req, res) => {
-    try {
-      const { amount } = req.body;
-      const accessToken = await getPayPalAccessToken();
-
-      const response = await fetch(`${PAYPAL_API}/v2/checkout/orders`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({
-          intent: "CAPTURE",
-          purchase_units: [
-            {
-              amount: {
-                currency_code: "USD",
-                value: amount.toString(),
-              },
-            },
-          ],
-        }),
-      });
-
-      const data = await response.json();
-      res.json(data);
-    } catch (error: any) {
-      console.error("PayPal Create Order Error:", error);
-      res.status(500).json({ message: error.message });
-    }
-  });
-
-  app.post("/api/capture-paypal-order", async (req, res) => {
-    try {
-      const { orderID } = req.body;
-      const accessToken = await getPayPalAccessToken();
-
-      const response = await fetch(`${PAYPAL_API}/v2/checkout/orders/${orderID}/capture`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-
-      const data = await response.json(); // Capture details
-      res.json(data);
-    } catch (error: any) {
-      console.error("PayPal Capture Error:", error);
       res.status(500).json({ message: error.message });
     }
   });
