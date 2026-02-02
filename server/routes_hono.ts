@@ -183,6 +183,7 @@ app.patch("/api/settings", async (c) => {
 app.post(api.orders.create.path, async (c) => {
     try {
         const body = await c.req.json();
+        console.log("Cloudflare Order Body:", JSON.stringify(body));
         const input = api.orders.create.input.parse(body);
         const order = await storage.createOrder(input);
         return c.json(order, 201);
