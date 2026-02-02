@@ -25,6 +25,10 @@ export function PayPalPayment({ amount, onSuccess }: PayPalButtonProps) {
         );
     }
 
+    if (!window.paypal) {
+        return <div className="flex justify-center p-4"><Loader2 className="animate-spin" /></div>;
+    }
+
     return (
         <div className="w-full z-0 relative">
             <PayPalButtons
