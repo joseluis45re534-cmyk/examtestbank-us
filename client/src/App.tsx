@@ -94,7 +94,7 @@ function Router() {
 }
 
 const initialPayPalOptions = {
-  clientId: "ED1e8sifTjfUSv9bwp3Y7fZwiNmivda9UznpliNaHdNWD8yXGrC9zPXKfbh9ciL8n6PojjK8WYvDPfcR",
+  clientId: "AWODaf8d8Tlv2CgeV0ZSSQBB8RiZh0iE74ihSq2U4M66FOUbsiGnOkHjHYxHVEOD_OnBKbL8VJ1p56oc",
   currency: "USD",
   components: "buttons",
 };
