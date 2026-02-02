@@ -110,7 +110,9 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
 export const insertProductSchema = createInsertSchema(products).omit({ id: true, rating: true, reviewCount: true });
 export const insertCategorySchema = createInsertSchema(categories).omit({ id: true });
 export const insertReviewSchema = createInsertSchema(reviews).omit({ id: true, createdAt: true });
-export const insertOrderSchema = createInsertSchema(orders).omit({ id: true, status: true, createdAt: true });
+export const insertOrderSchema = createInsertSchema(orders, {
+  totalAmount: z.coerce.string(),
+}).omit({ id: true, status: true, createdAt: true });
 export const insertOrderItemSchema = createInsertSchema(orderItems).omit({ id: true });
 export const insertContactMessageSchema = createInsertSchema(contactMessages).omit({ id: true, createdAt: true });
 

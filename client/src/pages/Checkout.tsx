@@ -96,7 +96,7 @@ function CheckoutForm({ clientSecret }: { clientSecret: string }) {
   const finalizeOrder = async (data: z.infer<typeof checkoutSchema>) => {
     const orderData = {
       email: data.email,
-      totalAmount: total().toString(),
+      totalAmount: String(total()),
       items: items.map(item => ({
         productId: item.id,
         quantity: item.quantity
