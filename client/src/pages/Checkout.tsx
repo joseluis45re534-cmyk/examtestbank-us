@@ -23,6 +23,7 @@ export default function Checkout() {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [pendingOrderId, setPendingOrderId] = useState<number | null>(null);
 
   const form = useForm<z.infer<typeof checkoutSchema>>({
     resolver: zodResolver(checkoutSchema),
@@ -32,6 +33,33 @@ export default function Checkout() {
       lastName: "",
     },
   });
+
+  // Auto-save Pending Order (Abandoned Checkout Capture)
+  const captureAbondonedCart = async () => {
+    const vals = form.getValues();
+    if (vals.email && vals.firstName && vals.lastName && !pendingOrderId) {
+      try {
+        // Basic validation
+        const vSchema = z.object({ email: z.string().email(), firstName: z.string().min(1), lastName: z.string().min(1) });
+        vSchema.parse({ email: vals.email, firstName: vals.firstName, lastName: vals.lastName });
+
+        const res = await fetch("/api/create-pending-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: vals.email,
+            totalAmount: String(total()),
+            items: items.map(i => ({ productId: i.id, quantity: i.quantity || 1 }))
+          })
+        });
+        if (res.ok) {
+          const order = await res.json();
+          console.log("Abandoned Cart Captured:", order.id);
+          setPendingOrderId(order.id);
+        }
+      } catch (e) { /* silent fail */ }
+    }
+  };
 
   const onSubmit = async (data: z.infer<typeof checkoutSchema>) => {
     setIsProcessing(true);
@@ -44,6 +72,7 @@ export default function Checkout() {
           firstName: data.firstName,
           lastName: data.lastName,
           totalAmount: total(), // Send as number, backend handles coercion
+          orderId: pendingOrderId, // Link this session to the pending order
           items: items // Optional: send items metadata
         }),
       });
@@ -73,17 +102,21 @@ export default function Checkout() {
 
   if (items.length === 0) {
     return (
-      <div className="container-width py-24 text-center">
-        <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
-        <Button onClick={() => setLocation("/products")}>Start Shopping</Button>
+      <div className="min-h-screen bg-slate-50 pt-24 pb-12">
+        <div className="container-width px-4 text-center">
+          <h1 className="text-3xl font-bold font-display text-slate-900 mb-4">Your Cart is Empty</h1>
+          <Button asChild>
+            <Link href="/products">Browse Products</Link>
+          </Button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 py-12">
-      <div className="container-width">
-        <h1 className="text-3xl font-bold mb-8 font-display">Checkout</h1>
+    <div className="min-h-screen bg-slate-50 pt-24 pb-12">
+      <div className="container-width px-4">
+        <h1 className="text-3xl font-bold font-display text-slate-900 mb-8">Checkout</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* Form Column */}
@@ -105,7 +138,7 @@ export default function Checkout() {
                         <FormItem>
                           <FormLabel>Email Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="student@university.edu" {...field} />
+                            <Input placeholder="student@university.edu" {...field} onBlur={(e) => { field.onBlur(); captureAbondonedCart(); }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -128,7 +161,7 @@ export default function Checkout() {
                           <FormItem>
                             <FormLabel>First Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="John" {...field} />
+                              <Input placeholder="John" {...field} onBlur={(e) => { field.onBlur(); captureAbondonedCart(); }} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -141,7 +174,7 @@ export default function Checkout() {
                           <FormItem>
                             <FormLabel>Last Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="Doe" {...field} />
+                              <Input placeholder="Doe" {...field} onBlur={(e) => { field.onBlur(); captureAbondonedCart(); }} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
