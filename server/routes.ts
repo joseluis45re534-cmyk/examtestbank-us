@@ -76,7 +76,7 @@ export async function registerRoutes(
   // Stripe Hosted Checkout
   app.post("/api/create-checkout-session", async (req, res) => {
     try {
-      const { email, totalAmount, items } = req.body;
+      const { email, firstName, lastName, totalAmount, items } = req.body;
       const baseUrl = `${req.protocol}://${req.get("host")}`;
 
       if (!process.env.STRIPE_SECRET_KEY) {
@@ -108,6 +108,9 @@ export async function registerRoutes(
         cancel_url: `${baseUrl}/checkout`,
         metadata: {
           email, // Store email to link later if needed
+          firstName,
+          lastName,
+          items: JSON.stringify(items)
         }
       });
 

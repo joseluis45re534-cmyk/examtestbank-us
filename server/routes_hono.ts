@@ -265,7 +265,7 @@ app.post("/api/create-payment-intent", async (c) => {
 
 app.post("/api/create-checkout-session", async (c) => {
     try {
-        const { email, totalAmount } = await c.req.json();
+        const { email, firstName, lastName, totalAmount, items } = await c.req.json();
         const baseUrl = "https://examtestbank.us"; // Hardcoded for production safety
 
         // Robust Key Access
@@ -300,6 +300,12 @@ app.post("/api/create-checkout-session", async (c) => {
             mode: "payment",
             success_url: `${baseUrl}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${baseUrl}/checkout`,
+            metadata: {
+                firstName,
+                lastName,
+                email,
+                items: JSON.stringify(items)
+            }
         });
 
         return c.json({ url: session.url });
