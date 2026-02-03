@@ -184,6 +184,14 @@ app.post(api.orders.create.path, async (c) => {
     try {
         const body = await c.req.json();
         console.log("Cloudflare Order Body:", JSON.stringify(body));
+
+        // Manual Force Conversion because Cloudflare/Zod interaction is proving stubborn
+        // @ts-ignore
+        if (body.totalAmount && typeof body.totalAmount !== 'string') {
+            // @ts-ignore
+            body.totalAmount = String(body.totalAmount);
+        }
+
         const input = api.orders.create.input.parse(body);
         const order = await storage.createOrder(input);
         return c.json(order, 201);
