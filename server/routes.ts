@@ -5,6 +5,7 @@ import { api } from "@shared/routes";
 import { z } from "zod";
 import { products, categories, reviews } from "@shared/schema";
 import { db } from "./db";
+import Stripe from "stripe";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -69,6 +70,51 @@ export async function registerRoutes(
       res.json(product);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch product" });
+    }
+  });
+
+  // Stripe Hosted Checkout
+  app.post("/api/create-checkout-session", async (req, res) => {
+    try {
+      const { email, totalAmount, items } = req.body;
+      const baseUrl = `${req.protocol}://${req.get("host")}`;
+
+      if (!process.env.STRIPE_SECRET_KEY) {
+        throw new Error("Stripe Secret Key missing");
+      }
+
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+        apiVersion: "2025-01-27.acacia",
+      });
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        customer_email: email,
+        line_items: [
+          {
+            price_data: {
+              currency: "usd",
+              product_data: {
+                name: "Order Total", // Simplified for now
+              },
+              unit_amount: Math.round(Number(totalAmount) * 100),
+            },
+            quantity: 1,
+            // In a real app, map 'items' to line_items here
+          },
+        ],
+        mode: "payment",
+        success_url: `${baseUrl}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${baseUrl}/checkout`,
+        metadata: {
+          email, // Store email to link later if needed
+        }
+      });
+
+      res.json({ url: session.url });
+    } catch (error: any) {
+      console.error("Stripe Session Error:", error);
+      res.status(500).json({ message: error.message });
     }
   });
 

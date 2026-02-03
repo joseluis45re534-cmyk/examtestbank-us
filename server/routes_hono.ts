@@ -263,6 +263,53 @@ app.post("/api/create-payment-intent", async (c) => {
     }
 });
 
+app.post("/api/create-checkout-session", async (c) => {
+    try {
+        const { email, totalAmount } = await c.req.json();
+        const baseUrl = "https://examtestbank.us"; // Hardcoded for production safety
+
+        // Robust Key Access
+        let apiKey = "";
+        try {
+            // @ts-ignore
+            if (c.env && c.env.STRIPE_SECRET_KEY) apiKey = c.env.STRIPE_SECRET_KEY;
+        } catch (e) { }
+
+        if (!apiKey) {
+            console.error("Missing Stripe Key in Cloudflare Env");
+            return c.json({ message: "Server Config Error" }, 500);
+        }
+
+        const Stripe = (await import("stripe")).default;
+        const stripe = new Stripe(apiKey, {
+            apiVersion: "2025-01-27.acacia",
+            httpClient: Stripe.createFetchHttpClient(),
+        });
+
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ["card"],
+            customer_email: email, // PRE-FILL EMAIL
+            line_items: [{
+                price_data: {
+                    currency: "usd",
+                    product_data: { name: "Exam Test Bank Order" },
+                    unit_amount: Math.round(Number(totalAmount) * 100),
+                },
+                quantity: 1,
+            }],
+            mode: "payment",
+            success_url: `${baseUrl}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${baseUrl}/checkout`,
+        });
+
+        return c.json({ url: session.url });
+    } catch (error: any) {
+        console.error("Stripe Checkout Error:", error);
+        // @ts-ignore
+        return c.json({ message: error.message }, 500);
+    }
+});
+
 // PayPal Config
 // NOTE: We will obfuscate these before pushing to bypass GitHub secret scanning
 // NOTE: We will obfuscate these before pushing to bypass GitHub secret scanning
