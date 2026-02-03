@@ -110,7 +110,8 @@ export async function registerRoutes(
           email, // Store email to link later if needed
           firstName,
           lastName,
-          items: JSON.stringify(items)
+          // Stripe metadata limit is 500 chars. Send only minimal info.
+          items: JSON.stringify(items.map((i: any) => ({ pid: i.id || i.productId, q: i.quantity || 1 })))
         }
       });
 

@@ -304,7 +304,8 @@ app.post("/api/create-checkout-session", async (c) => {
                 firstName,
                 lastName,
                 email,
-                items: JSON.stringify(items)
+                // Stripe metadata limit is 500 chars. Send only minimal info.
+                items: JSON.stringify(items.map((i: any) => ({ pid: i.productId || i.id, q: i.quantity || 1 })))
             }
         });
 
