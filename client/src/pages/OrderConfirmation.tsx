@@ -12,6 +12,8 @@ export default function OrderConfirmation() {
     const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
     const { clearCart } = useCart();
 
+    const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
     useEffect(() => {
         if (!sessionId) {
             setStatus('success'); // Fallback if regular navigation
@@ -30,11 +32,14 @@ export default function OrderConfirmation() {
                     clearCart();
                     setStatus('success');
                 } else {
-                    console.error("Verification failed");
+                    const data = await res.json();
+                    console.error("Verification failed", data);
+                    setErrorMsg(data.message || "Unknown server error");
                     setStatus('error');
                 }
-            } catch (e) {
+            } catch (e: any) {
                 console.error(e);
+                setErrorMsg(e.message || "Network request failed");
                 setStatus('error');
             }
         };
@@ -59,6 +64,13 @@ export default function OrderConfirmation() {
                 <div className="text-center max-w-md p-8">
                     <h1 className="text-2xl font-bold text-red-600 mb-2">Something went wrong</h1>
                     <p className="text-muted-foreground mb-4">We couldn't verify your payment. If you were charged, please contact support.</p>
+
+                    {errorMsg && (
+                        <div className="bg-slate-100 p-3 rounded text-xs text-left mb-4 font-mono overflow-auto max-h-32">
+                            ERROR: {errorMsg}
+                        </div>
+                    )}
+
                     <Button asChild><Link href="/contact">Contact Support</Link></Button>
                 </div>
             </div>
