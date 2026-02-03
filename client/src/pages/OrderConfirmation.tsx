@@ -1,9 +1,70 @@
-import { Link } from "wouter";
-import { CheckCircle, Home, ShoppingBag } from "lucide-react";
+import { Link, useSearch } from "wouter";
+import { CheckCircle, Home, ShoppingBag, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { useCart } from "@/hooks/use-cart";
 
 export default function OrderConfirmation() {
+    const searchString = window.location.search;
+    const searchParams = new URLSearchParams(searchString);
+    const sessionId = searchParams.get("session_id");
+    const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
+    const { clearCart } = useCart();
+
+    useEffect(() => {
+        if (!sessionId) {
+            setStatus('success'); // Fallback if regular navigation
+            return;
+        }
+
+        const verifyOrder = async () => {
+            try {
+                const res = await fetch('/api/verify-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sessionId })
+                });
+
+                if (res.ok) {
+                    clearCart();
+                    setStatus('success');
+                } else {
+                    console.error("Verification failed");
+                    setStatus('error');
+                }
+            } catch (e) {
+                console.error(e);
+                setStatus('error');
+            }
+        };
+
+        verifyOrder();
+    }, [sessionId]);
+
+    if (status === 'loading') {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                    <Loader2 className="w-12 h-12 animate-spin text-primary mx-auto mb-4" />
+                    <p className="text-muted-foreground">Finalizing your order...</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (status === 'error') {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center max-w-md p-8">
+                    <h1 className="text-2xl font-bold text-red-600 mb-2">Something went wrong</h1>
+                    <p className="text-muted-foreground mb-4">We couldn't verify your payment. If you were charged, please contact support.</p>
+                    <Button asChild><Link href="/contact">Contact Support</Link></Button>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-slate-50 py-24 flex items-center justify-center">
             <div className="container-width max-w-lg">

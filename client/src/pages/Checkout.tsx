@@ -41,6 +41,8 @@ export default function Checkout() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: data.email,
+          firstName: data.firstName,
+          lastName: data.lastName,
           totalAmount: total(), // Send as number, backend handles coercion
           items: items // Optional: send items metadata
         }),
