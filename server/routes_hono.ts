@@ -9,7 +9,7 @@ const app = new Hono();
 app.get("/feed.xml", async (c) => {
     try {
         const products = await storage.getProducts();
-        const baseUrl = "https://examtestbank-us.com"; // User should update this to their real domain
+        const baseUrl = "https://examtestbank.us"; // User should update this to their real domain
 
         let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
