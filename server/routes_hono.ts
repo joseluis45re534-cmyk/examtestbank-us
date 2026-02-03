@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import { storage } from "./storage"; // Uses MemStorage by default now
-import { api } from "@shared/routes";
+import { storage } from "./storage";
+import { api } from "../shared/routes";
 import { z } from "zod";
 
 const app = new Hono();
@@ -198,7 +198,7 @@ app.post(api.orders.create.path, async (c) => {
     } catch (err) {
         if (err instanceof z.ZodError) {
             return c.json({
-                message: err.errors[0].message,
+                message: "DEBUG TRACER: " + err.errors[0].message,
                 field: err.errors[0].path.join('.'),
             }, 400);
         }
