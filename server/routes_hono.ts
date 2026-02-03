@@ -263,9 +263,26 @@ app.post("/api/create-payment-intent", async (c) => {
     }
 });
 
+app.post("/api/create-pending-order", async (c) => {
+    try {
+        const { email, totalAmount, items } = await c.req.json();
+        // @ts-ignore
+        const order = await storage.createOrder({
+            email,
+            totalAmount: (totalAmount || 0).toString(),
+            status: "pending", // Explicitly pending
+            items: items || []
+        });
+        return c.json(order);
+    } catch (error: any) {
+        console.error("Create Pending Order Error:", error);
+        return c.json({ message: error.message }, 500);
+    }
+});
+
 app.post("/api/create-checkout-session", async (c) => {
     try {
-        const { email, firstName, lastName, totalAmount, items } = await c.req.json();
+        const { email, firstName, lastName, totalAmount, items, orderId } = await c.req.json();
         const baseUrl = "https://examtestbank.us"; // Hardcoded for production safety
 
         // Robust Key Access
@@ -304,6 +321,7 @@ app.post("/api/create-checkout-session", async (c) => {
                 firstName,
                 lastName,
                 email,
+                orderId: orderId ? orderId.toString() : "", // Link to pending order
                 // Stripe metadata limit is 500 chars. Send only minimal info.
                 items: JSON.stringify(items.map((i: any) => ({ pid: i.productId || i.id, q: i.quantity || 1 })))
             }
@@ -312,6 +330,66 @@ app.post("/api/create-checkout-session", async (c) => {
         return c.json({ url: session.url });
     } catch (error: any) {
         console.error("Stripe Checkout Error:", error);
+        // @ts-ignore
+        return c.json({ message: error.message }, 500);
+    }
+});
+
+app.post("/api/verify-checkout-session", async (c) => {
+    try {
+        const { sessionId } = await c.req.json();
+
+        // Robust Key Access (duplicated for safety)
+        let apiKey = "";
+        try {
+            // @ts-ignore
+            if (c.env && c.env.STRIPE_SECRET_KEY) apiKey = c.env.STRIPE_SECRET_KEY;
+        } catch (e) { }
+
+        if (!apiKey) return c.json({ message: "Config Error" }, 500);
+
+        const Stripe = (await import("stripe")).default;
+        const stripe = new Stripe(apiKey, {
+            apiVersion: "2025-12-15.clover",
+            httpClient: Stripe.createFetchHttpClient(),
+        });
+
+        const session = await stripe.checkout.sessions.retrieve(sessionId);
+
+        if (session.payment_status === "paid") {
+            const meta = session.metadata || {};
+
+            // Check if we have an existing Pending Order ID
+            if (meta.orderId) {
+                // Transition Status from Pending -> Paid
+                // @ts-ignore
+                const updatedOrder = await storage.updateOrderStatus(Number(meta.orderId), "paid");
+                return c.json({ success: true, order: updatedOrder });
+            }
+
+            const items = meta.items ? JSON.parse(meta.items) : [];
+            const total = session.amount_total ? (session.amount_total / 100).toString() : "0";
+
+            // Create Order in DB (Paid)
+            const input = {
+                email: meta.email || session.customer_details?.email || "",
+                totalAmount: total,
+                status: "paid", // Set as PAID immediately
+                items: items.map((i: any) => ({
+                    productId: i.pid || i.productId,
+                    quantity: i.q || i.quantity
+                }))
+            };
+
+            // @ts-ignore
+            const order = await storage.createOrder(input);
+            return c.json({ success: true, order });
+        } else {
+            return c.json({ message: "Payment not completed" }, 400);
+        }
+
+    } catch (error: any) {
+        console.error("Verify Session Error:", error);
         // @ts-ignore
         return c.json({ message: error.message }, 500);
     }

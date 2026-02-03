@@ -30,6 +30,7 @@ export interface IStorage {
     // Orders
     getOrders(): Promise<Order[]>;
     createOrder(order: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any>;
+    updateOrderStatus(id: number, status: string): Promise<Order>;
 
     // Contact
     createContactMessage(message: InsertContactMessage): Promise<any>;

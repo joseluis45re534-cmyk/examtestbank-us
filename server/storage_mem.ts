@@ -194,6 +194,13 @@ export class MemStorage implements IStorage {
         return order;
     }
 
+    async updateOrderStatus(id: number, status: string): Promise<Order> {
+        const order = this.orders.find(o => o.id === id);
+        if (!order) throw new Error("Order not found");
+        order.status = status;
+        return order;
+    }
+
     async createContactMessage(message: InsertContactMessage): Promise<any> {
         const msg = { ...message, id: this.currentId.contactMessages++, createdAt: new Date() };
         this.contactMessages.push(msg as ContactMessage);

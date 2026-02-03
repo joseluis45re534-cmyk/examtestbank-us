@@ -149,6 +149,15 @@ export class D1Storage implements IStorage {
         return newOrder;
     }
 
+    async updateOrderStatus(id: number, status: string): Promise<Order> {
+        const { results } = await this.db.prepare(`
+            UPDATE orders SET status = ? WHERE id = ? RETURNING *
+        `).bind(status, id).all();
+
+        if (!results || results.length === 0) throw new Error("Order not found");
+        return this.mapOrder(results[0]);
+    }
+
     async createContactMessage(message: InsertContactMessage): Promise<any> {
         return { success: true }; // Stub
     }
