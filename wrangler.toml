@@ -3,7 +3,7 @@ compatibility_date = "2024-01-22"
 pages_build_output_dir = "dist/public"
 
 [vars]
-VITE_STRIPE_PUBLISHABLE_KEY = "pk_test_51SmUtnHL8Re8eVeSvI60MBhhzJ2PXlaGZoR3sDfSkpwDf9ulQ8cLcDIn5LhTfVDE2KDhRqN9cHovcdWCGLL7wXNf00aLZnJyEL"
+VITE_STRIPE_PUBLISHABLE_KEY = "pk_live_51SmUsuH1B3BkzHT6ftQdhl1KdHz4HDBhdQBwWYiL6p1hWgS94h6eKDjDfpNnp0QwdBB8miSmD5i8RzUAxg5udf2N00atehEkFw"
 # STRIPE_SECRET_KEY must be added in Cloudflare Dashboard -> Settings -> Variables
 # NODE_ENV = "production" # Optional
 [[d1_databases]]
