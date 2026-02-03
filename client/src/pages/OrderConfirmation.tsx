@@ -32,9 +32,15 @@ export default function OrderConfirmation() {
                     clearCart();
                     setStatus('success');
                 } else {
-                    const data = await res.json();
-                    console.error("Verification failed", data);
-                    setErrorMsg(data.message || "Unknown server error");
+                    const text = await res.text();
+                    console.error("Verification failed (Raw)", text);
+                    try {
+                        const data = JSON.parse(text);
+                        setErrorMsg(data.message || "Unknown server error");
+                    } catch (jsonErr) {
+                        // Fallback: Show the raw text (truncated) if it's not JSON
+                        setErrorMsg(`Invalid JSON response: ${text.substring(0, 100)}`);
+                    }
                     setStatus('error');
                 }
             } catch (e: any) {
