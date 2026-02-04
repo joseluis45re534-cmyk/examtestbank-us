@@ -45,7 +45,6 @@ export default function Checkout() {
   const { items, total } = useCart();
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
-  const [pendingOrderId, setPendingOrderId] = useState<number | null>(null);
   const [clientSecret, setClientSecret] = useState<string | null>(null);
 
   const form = useForm<z.infer<typeof checkoutSchema>>({
@@ -131,7 +130,6 @@ export default function Checkout() {
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 
-                  {/* Contact Info */}
                   <Card>
                     <CardHeader>
                       <CardTitle>Contact Information</CardTitle>
@@ -145,7 +143,7 @@ export default function Checkout() {
                           <FormItem>
                             <FormLabel>Email Address</FormLabel>
                             <FormControl>
-                              <Input placeholder="student@university.edu" {...field} onBlur={(e) => { field.onBlur(); captureAbondonedCart(); }} />
+                              <Input placeholder="student@university.edu" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -168,7 +166,7 @@ export default function Checkout() {
                             <FormItem>
                               <FormLabel>First Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="John" {...field} onBlur={(e) => { field.onBlur(); captureAbondonedCart(); }} />
+                                <Input placeholder="John" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -181,7 +179,7 @@ export default function Checkout() {
                             <FormItem>
                               <FormLabel>Last Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="Doe" {...field} onBlur={(e) => { field.onBlur(); captureAbondonedCart(); }} />
+                                <Input placeholder="Doe" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
