@@ -231,7 +231,7 @@ export default function Checkout() {
                   Payments are securely processed by Stripe. Your data is protected by SSL encryption.
                 </p>
                 <div className="text-center mt-2">
-                  <Button variant="link" size="sm" onClick={() => setClientSecret(null)} className="text-muted-foreground">
+                  <Button variant="ghost" size="sm" onClick={() => setClientSecret(null)} className="text-muted-foreground hover:bg-transparent hover:underline">
                     &larr; Back to Contact Info
                   </Button>
                 </div>
