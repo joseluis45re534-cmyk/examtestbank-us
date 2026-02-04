@@ -57,61 +57,9 @@ export default function Checkout() {
     },
   });
 
-  // Auto-save Pending Order (Abandoned Checkout Capture)
-  const captureAbondonedCart = async () => {
-    const vals = form.getValues();
-    // Allow update if we already have an ID, or create new if we have basic info
-    if (vals.email && vals.firstName && vals.lastName) {
-      try {
-        // Basic validation
-        const vSchema = z.object({ email: z.string().email(), firstName: z.string().min(1), lastName: z.string().min(1) });
-        vSchema.parse({ email: vals.email, firstName: vals.firstName, lastName: vals.lastName });
-
-        const res = await fetch("/api/create-pending-order", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            orderId: pendingOrderId, // Pass existing ID to update
-            email: vals.email,
-            firstName: vals.firstName,
-            lastName: vals.lastName,
-            totalAmount: String(total()),
-            items: items.map(i => ({ productId: i.id, quantity: i.quantity || 1 }))
-          })
-        });
-        if (res.ok) {
-          const order = await res.json();
-          console.log("Abandoned Cart Captured/Updated:", order.id);
-          if (!pendingOrderId) setPendingOrderId(order.id);
-        }
-      } catch (e) { /* silent fail */ }
-    }
-  };
-
   const onSubmit = async (data: z.infer<typeof checkoutSchema>) => {
     setIsProcessing(true);
     try {
-      // 1. Ensure Abandoned Cart is captured first if not already
-      let currentOrderId = pendingOrderId;
-      if (!currentOrderId) {
-        const res = await fetch("/api/create-pending-order", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: data.email,
-            firstName: data.firstName,
-            lastName: data.lastName,
-            totalAmount: String(total()),
-            items: items.map(i => ({ productId: i.id, quantity: i.quantity || 1 }))
-          })
-        });
-        if (res.ok) {
-          const order = await res.json();
-          currentOrderId = order.id;
-          setPendingOrderId(order.id);
-        }
-      }
-
       // 2. Create Stripe Session (Embedded)
       const response = await fetch("/api/create-checkout-session", {
         method: "POST",
@@ -121,7 +69,6 @@ export default function Checkout() {
           firstName: data.firstName,
           lastName: data.lastName,
           totalAmount: total(),
-          orderId: currentOrderId,
           items: items
         }),
       });

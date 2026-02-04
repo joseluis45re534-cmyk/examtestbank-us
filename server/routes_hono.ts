@@ -273,51 +273,6 @@ app.post("/api/create-payment-intent", async (c) => {
     }
 });
 
-app.post("/api/create-pending-order", async (c) => {
-    try {
-        const { email, firstName, lastName, totalAmount, items, orderId } = await c.req.json();
-
-        let order;
-        if (orderId) {
-            // Update existing pending order
-            // Note: In a real app we'd verify ownership/session, but acceptable for this scope
-            // We reuse storage.updateOrderStatus or add a updateOrder method. 
-            // For simplicity, we'll assuming updating contact info is main goal.
-            // But storage_interface doesn't have generic updateOrder.
-            // We will stick to creating NEW if not simple status update, OR just let the flow be:
-            // If user changes email, we update the existing record's email?
-            // D1Storage doesn't have 'updateOrderDetails'. 
-            // I'll add a quick ad-hoc update query here or skip update and just create new?
-            // Creating new might spam DB. I'll add 'updateOrderDetails' to storage_d1.
-
-            // ... actually, let's keep it simple. If orderId exists, we update it via direct query in storage if possible, 
-            // or just ignore updates for now (first capture is most important).
-            // PROPOSAL: I'll skip complex update for now to avoid breaking changes, 
-            // but I will ensure the INITIAL capture is robust.
-            // User's request: "As soon as user populates... record should be generated".
-            // If they change it, we probably want that update.
-
-            // Let's rely on the first capture.
-            // But wait, if they fix a typo in email, we want the FIX.
-            // I'll add 'updateOrderDetails' to storage.
-            order = await storage.updateOrderDetails(orderId, { email, name: `${firstName} ${lastName}`.trim() });
-        } else {
-            // @ts-ignore
-            order = await storage.createOrder({
-                email,
-                name: `${firstName} ${lastName}`.trim(),
-                totalAmount: (totalAmount || 0).toString(),
-                status: "pending",
-                items: items || []
-            });
-        }
-        return c.json(order);
-    } catch (error: any) {
-        console.error("Create/Update Pending Order Error:", error);
-        return c.json({ message: error.message }, 500);
-    }
-});
-
 app.post("/api/create-checkout-session", async (c) => {
     try {
         const { email, firstName, lastName, totalAmount, items, orderId } = await c.req.json();
