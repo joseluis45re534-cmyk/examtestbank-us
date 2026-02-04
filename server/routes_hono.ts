@@ -317,6 +317,7 @@ app.post("/api/create-checkout-session", async (c) => {
                 },
                 quantity: 1,
             }],
+            mode: 'payment',
             ui_mode: 'embedded',
             return_url: `${baseUrl}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`,
             metadata: {
