@@ -125,6 +125,17 @@ export class D1Storage implements IStorage {
 
     // Orders
     async getOrders(page: number = 1, limit: number = 10): Promise<{ orders: (Order & { items: any[] })[], total: number }> {
+        // LAZY CRON: Automatically mark 'pending' orders older than 1 hour as 'abandoned'
+        // This ensures the admin view reflects reality without a background job.
+        try {
+            await this.db.prepare(`
+                UPDATE orders 
+                SET status = 'abandoned' 
+                WHERE status = 'pending' 
+                AND created_at < datetime('now', '-1 hour')
+            `).run();
+        } catch (e) { console.error("Auto-abandon update failed", e); }
+
         const offset = (page - 1) * limit;
 
         // Fetch orders with items as JSON string (SQLite/D1)
@@ -177,6 +188,14 @@ export class D1Storage implements IStorage {
             UPDATE orders SET status = ? WHERE id = ? RETURNING *
         `).bind(status, id).all();
 
+        if (!results || results.length === 0) throw new Error("Order not found");
+        return this.mapOrder(results[0]);
+    }
+
+    async updateOrderDetails(id: number, details: { email: string; name: string }): Promise<Order> {
+        const { results } = await this.db.prepare(`
+            UPDATE orders SET email = ?, name = ? WHERE id = ? RETURNING *
+        `).bind(details.email, details.name, id).all();
         if (!results || results.length === 0) throw new Error("Order not found");
         return this.mapOrder(results[0]);
     }
