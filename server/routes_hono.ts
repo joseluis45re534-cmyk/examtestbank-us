@@ -317,9 +317,8 @@ app.post("/api/create-checkout-session", async (c) => {
                 },
                 quantity: 1,
             }],
-            mode: "payment",
-            success_url: `${baseUrl}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: `${baseUrl}/checkout`,
+            ui_mode: 'embedded',
+            return_url: `${baseUrl}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`,
             metadata: {
                 firstName,
                 lastName,
@@ -330,7 +329,7 @@ app.post("/api/create-checkout-session", async (c) => {
             }
         });
 
-        return c.json({ url: session.url });
+        return c.json({ clientSecret: session.client_secret });
     } catch (error: any) {
         console.error("Stripe Checkout Error:", error);
         // @ts-ignore
