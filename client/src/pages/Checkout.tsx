@@ -60,7 +60,8 @@ export default function Checkout() {
   // Auto-save Pending Order (Abandoned Checkout Capture)
   const captureAbondonedCart = async () => {
     const vals = form.getValues();
-    if (vals.email && vals.firstName && vals.lastName && !pendingOrderId) {
+    // Allow update if we already have an ID, or create new if we have basic info
+    if (vals.email && vals.firstName && vals.lastName) {
       try {
         // Basic validation
         const vSchema = z.object({ email: z.string().email(), firstName: z.string().min(1), lastName: z.string().min(1) });
@@ -70,6 +71,7 @@ export default function Checkout() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
+            orderId: pendingOrderId, // Pass existing ID to update
             email: vals.email,
             firstName: vals.firstName,
             lastName: vals.lastName,
@@ -79,8 +81,8 @@ export default function Checkout() {
         });
         if (res.ok) {
           const order = await res.json();
-          console.log("Abandoned Cart Captured:", order.id);
-          setPendingOrderId(order.id);
+          console.log("Abandoned Cart Captured/Updated:", order.id);
+          if (!pendingOrderId) setPendingOrderId(order.id);
         }
       } catch (e) { /* silent fail */ }
     }
