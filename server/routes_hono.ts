@@ -142,10 +142,12 @@ app.get(api.reviews.list.path, async (c) => {
 });
 
 app.get("/api/admin/orders", async (c) => {
-    // In a real app, check admin session here
+    // Admin: Get all orders (Paginated)
     try {
-        const orders = await storage.getOrders();
-        return c.json(orders);
+        const page = Number(c.req.query("page")) || 1;
+        const limit = Number(c.req.query("limit")) || 10;
+        const result = await storage.getOrders(page, limit);
+        return c.json(result);
     } catch (err) {
         return c.json({ message: "Failed to fetch orders" }, 500);
     }
@@ -265,12 +267,13 @@ app.post("/api/create-payment-intent", async (c) => {
 
 app.post("/api/create-pending-order", async (c) => {
     try {
-        const { email, totalAmount, items } = await c.req.json();
+        const { email, firstName, lastName, totalAmount, items } = await c.req.json();
         // @ts-ignore
         const order = await storage.createOrder({
             email,
+            name: `${firstName} ${lastName}`.trim(),
             totalAmount: (totalAmount || 0).toString(),
-            status: "pending", // Explicitly pending
+            status: "pending",
             items: items || []
         });
         return c.json(order);
@@ -373,6 +376,7 @@ app.post("/api/verify-checkout-session", async (c) => {
             // Create Order in DB (Paid)
             const input = {
                 email: meta.email || session.customer_details?.email || "",
+                name: (meta.firstName && meta.lastName) ? `${meta.firstName} ${meta.lastName}` : session.customer_details?.name || "",
                 totalAmount: total,
                 status: "paid", // Set as PAID immediately
                 items: items.map((i: any) => ({
