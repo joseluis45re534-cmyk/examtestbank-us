@@ -59,7 +59,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <nav className="flex-1 p-4 space-y-2">
                     <NavItem href="/admin" icon={LayoutDashboard} label="Dashboard" />
                     <NavItem href="/admin/products" icon={Package} label="Products" />
-                    <NavItem href="/admin/orders" icon={ShoppingCart} label="Orders" />
                     <NavItem href="/admin/settings" icon={Settings} label="Settings" />
                 </nav>
 

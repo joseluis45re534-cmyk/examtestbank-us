@@ -26,7 +26,6 @@ import ContactInfo from "@/pages/legal/ContactInfo";
 import AdminLogin from "@/pages/admin/Login";
 import AdminDashboard from "@/pages/admin/Dashboard";
 import AdminProducts from "@/pages/admin/Products";
-import AdminOrders from "@/pages/admin/Orders";
 import AdminSettings from "@/pages/admin/Settings";
 
 // Helper to wrap public pages with Header/Footer
@@ -83,7 +82,6 @@ function Router() {
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/products" component={AdminProducts} />
-      <Route path="/admin/orders" component={AdminOrders} />
       <Route path="/admin/settings" component={AdminSettings} />
 
       {/* Fallback */}
