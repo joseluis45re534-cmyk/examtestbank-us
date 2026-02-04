@@ -28,7 +28,7 @@ export interface IStorage {
     createReview(review: any): Promise<Review>;
 
     // Orders
-    getOrders(page?: number, limit?: number): Promise<{ orders: Order[], total: number }>;
+    getOrders(page?: number, limit?: number): Promise<{ orders: (Order & { items: any[] })[], total: number }>;
     createOrder(order: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any>;
     updateOrderStatus(id: number, status: string): Promise<Order>;
 

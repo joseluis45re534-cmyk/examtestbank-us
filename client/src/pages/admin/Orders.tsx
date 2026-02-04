@@ -125,6 +125,21 @@ export default function AdminOrders() {
                                                         <span className="col-span-3 capitalize">{order.status}</span>
                                                     </div>
                                                     <div className="border-t pt-4 mt-2">
+                                                        <h4 className="font-semibold mb-2">Items</h4>
+                                                        {(order as any).items && (order as any).items.length > 0 ? (
+                                                            <div className="space-y-2">
+                                                                {(order as any).items.map((item: any, idx: number) => (
+                                                                    <div key={idx} className="flex justify-between text-sm bg-slate-50 p-2 rounded">
+                                                                        <span>Product ID: <span className="font-mono font-bold">{item.productId}</span></span>
+                                                                        <span className="text-muted-foreground">Qty: {item.quantity || 1}</span>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        ) : (
+                                                            <p className="text-sm text-muted-foreground">No items recorded.</p>
+                                                        )}
+                                                    </div>
+                                                    <div className="border-t pt-4 mt-2">
                                                         <h4 className="font-semibold mb-2">Order Data</h4>
                                                         <pre className="bg-slate-100 p-2 rounded text-xs overflow-auto max-h-[200px]">
                                                             {JSON.stringify(order, null, 2)}

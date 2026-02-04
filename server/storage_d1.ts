@@ -124,37 +124,49 @@ export class D1Storage implements IStorage {
     }
 
     // Orders
-    async getOrders(page: number = 1, limit: number = 10): Promise<{ orders: Order[], total: number }> {
+    async getOrders(page: number = 1, limit: number = 10): Promise<{ orders: (Order & { items: any[] })[], total: number }> {
         const offset = (page - 1) * limit;
 
-        // Parallel queries for data and count
+        // Fetch orders with items as JSON string (SQLite/D1)
         const [dataResult, countResult] = await Promise.all([
-            this.db.prepare("SELECT * FROM orders ORDER BY created_at DESC LIMIT ? OFFSET ?").bind(limit, offset).all(),
+            this.db.prepare(`
+                SELECT o.*, 
+                (SELECT json_group_array(json_object('productId', oi.product_id, 'quantity', 1)) 
+                 FROM order_items oi WHERE oi.order_id = o.id) as items
+                FROM orders o 
+                ORDER BY o.created_at DESC LIMIT ? OFFSET ?
+            `).bind(limit, offset).all(),
             this.db.prepare("SELECT COUNT(*) as total FROM orders").first()
         ]);
 
+        const orders = dataResult.results.map((r: any) => ({
+            ...this.mapOrder(r),
+            items: r.items ? JSON.parse(r.items) : []
+        }));
+
         return {
-            orders: dataResult.results.map((r: any) => this.mapOrder(r)),
+            orders,
             total: countResult?.total || 0
         };
     }
 
     async createOrder(order: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any> {
-        // Transaction manually or just sequential
-        // D1 supports batching but true transactions rely on worker environment quirks.
-        // Simplified:
+        // 1. Create Order
         const { results } = await this.db.prepare(`
             INSERT INTO orders (email, name, total_amount, status) VALUES (?, ?, ?, ?) RETURNING id, email, name, total_amount, status, created_at
         `).bind(order.email, order.name || null, order.totalAmount, order.status || "pending").all();
 
         const newOrder = this.mapOrder(results[0]);
 
-        // Insert items
-        const placeholders = order.items.map(() => "(?, ?, ?)").join(", ");
-        const itemArgs = order.items.flatMap(item => [newOrder.id, item.productId, 10.00]); // Mock price fetch for now or join
+        // 2. Create Order Items
+        if (order.items && order.items.length > 0) {
+            const placeholders = order.items.map(() => "(?, ?, ?)").join(", ");
+            const itemArgs = order.items.flatMap(item => [newOrder.id, item.productId, 10.00]); // TODO: Fetch real price
 
-        // This fails if empty items, assuming validated
-        // For accurate pricing we'd need to look up products first. Skipping for brevity of this artifact.
+            await this.db.prepare(`
+                INSERT INTO order_items (order_id, product_id, price) VALUES ${placeholders}
+            `).bind(...itemArgs).run();
+        }
 
         return newOrder;
     }
