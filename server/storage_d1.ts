@@ -152,9 +152,10 @@ export class D1Storage implements IStorage {
 
     async createOrder(order: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any> {
         // 1. Create Order
+        const createdAt = new Date().toISOString();
         const { results } = await this.db.prepare(`
-            INSERT INTO orders (email, name, total_amount, status) VALUES (?, ?, ?, ?) RETURNING id, email, name, total_amount, status, created_at
-        `).bind(order.email, order.name || null, order.totalAmount, order.status || "pending").all();
+            INSERT INTO orders (email, name, total_amount, status, created_at) VALUES (?, ?, ?, ?, ?) RETURNING id, email, name, total_amount, status, created_at
+        `).bind(order.email, order.name || null, order.totalAmount, order.status || "pending", createdAt).all();
 
         const newOrder = this.mapOrder(results[0]);
 
