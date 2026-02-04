@@ -124,9 +124,19 @@ export class D1Storage implements IStorage {
     }
 
     // Orders
-    async getOrders(): Promise<Order[]> {
-        const { results } = await this.db.prepare("SELECT * FROM orders ORDER BY created_at DESC").all();
-        return results.map((r: any) => this.mapOrder(r));
+    async getOrders(page: number = 1, limit: number = 10): Promise<{ orders: Order[], total: number }> {
+        const offset = (page - 1) * limit;
+
+        // Parallel queries for data and count
+        const [dataResult, countResult] = await Promise.all([
+            this.db.prepare("SELECT * FROM orders ORDER BY created_at DESC LIMIT ? OFFSET ?").bind(limit, offset).all(),
+            this.db.prepare("SELECT COUNT(*) as total FROM orders").first()
+        ]);
+
+        return {
+            orders: dataResult.results.map((r: any) => this.mapOrder(r)),
+            total: countResult?.total || 0
+        };
     }
 
     async createOrder(order: InsertOrder & { items: { productId: number; quantity: number }[] }): Promise<any> {
@@ -134,8 +144,8 @@ export class D1Storage implements IStorage {
         // D1 supports batching but true transactions rely on worker environment quirks.
         // Simplified:
         const { results } = await this.db.prepare(`
-            INSERT INTO orders (email, total_amount, status) VALUES (?, ?, ?) RETURNING id, email, total_amount, status, created_at
-        `).bind(order.email, order.totalAmount, "pending").all();
+            INSERT INTO orders (email, name, total_amount, status) VALUES (?, ?, ?, ?) RETURNING id, email, name, total_amount, status, created_at
+        `).bind(order.email, order.name || null, order.totalAmount, order.status || "pending").all();
 
         const newOrder = this.mapOrder(results[0]);
 
@@ -222,6 +232,7 @@ export class D1Storage implements IStorage {
         return {
             id: row.id,
             email: row.email,
+            name: row.name,
             totalAmount: row.total_amount,
             status: row.status,
             createdAt: new Date(row.created_at)

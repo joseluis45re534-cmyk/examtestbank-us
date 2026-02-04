@@ -46,6 +46,7 @@ export const reviews = pgTable("reviews", {
 export const orders = pgTable("orders", {
   id: serial("id").primaryKey(),
   email: text("email").notNull(),
+  name: text("name"), // Added for easier admin identification
   totalAmount: decimal("total_amount", { precision: 10, scale: 2 }).notNull(),
   status: text("status").default("pending"), // pending, completed
   createdAt: timestamp("created_at").defaultNow(),
