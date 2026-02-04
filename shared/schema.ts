@@ -113,7 +113,7 @@ export const insertCategorySchema = createInsertSchema(categories).omit({ id: tr
 export const insertReviewSchema = createInsertSchema(reviews).omit({ id: true, createdAt: true });
 export const insertOrderSchema = createInsertSchema(orders, {
   totalAmount: z.coerce.string(),
-}).omit({ id: true, status: true, createdAt: true });
+}).omit({ id: true });
 export const insertOrderItemSchema = createInsertSchema(orderItems).omit({ id: true });
 export const insertContactMessageSchema = createInsertSchema(contactMessages).omit({ id: true, createdAt: true });
 

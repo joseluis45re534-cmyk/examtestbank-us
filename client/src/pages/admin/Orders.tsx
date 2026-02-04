@@ -88,7 +88,16 @@ export default function AdminOrders() {
                                     <TableCell>{order.name || "N/A"}</TableCell>
                                     <TableCell>{order.email}</TableCell>
                                     <TableCell>
-                                        {order.createdAt && format(new Date(order.createdAt), "MMM d, yyyy")}
+                                        {/* Safe Date Rendering */}
+                                        {order.createdAt ? (
+                                            (() => {
+                                                try {
+                                                    return format(new Date(order.createdAt), "MMM d, yyyy");
+                                                } catch (e) {
+                                                    return "Invalid Date";
+                                                }
+                                            })()
+                                        ) : "N/A"}
                                     </TableCell>
                                     <TableCell>${Number(order.totalAmount).toFixed(2)}</TableCell>
                                     <TableCell>
@@ -108,7 +117,7 @@ export default function AdminOrders() {
                                                 <DialogHeader>
                                                     <DialogTitle>Order Details #{order.id}</DialogTitle>
                                                     <DialogDescription>
-                                                        Details for order placed on {order.createdAt && format(new Date(order.createdAt), "PPP")}
+                                                        Details for order placed on {order.createdAt ? (() => { try { return format(new Date(order.createdAt), "PPP"); } catch (e) { return "Unknown Date"; } })() : "N/A"}
                                                     </DialogDescription>
                                                 </DialogHeader>
                                                 <div className="grid gap-4 py-4">
