@@ -224,16 +224,15 @@ app.post(api.contact.submit.path, async (c) => {
 
 app.post("/api/create-payment-intent", async (c) => {
     try {
-        const { amount, currency = "usd" } = await c.req.json();
+        const { amount, currency = "usd", metadata = {} } = await c.req.json();
 
-        // Robust Env Access for hybrid Edge/Node environments
+        // Robust Env Access
         let apiKey = "";
         try {
             // @ts-ignore
             if (c.env && c.env.STRIPE_SECRET_KEY) apiKey = c.env.STRIPE_SECRET_KEY;
         } catch (e) { /* ignore access error */ }
 
-        // Fallback to mock if no key (should not happen given we hardcoded, but good for safety)
         if (!apiKey) {
             console.warn("No API Key found, using mock.");
             return c.json({ clientSecret: "mock_secret_" + Date.now(), mock: true });
@@ -243,19 +242,28 @@ app.post("/api/create-payment-intent", async (c) => {
         try {
             Stripe = (await import("stripe")).default;
         } catch (e) {
-            console.warn("Could not load Stripe SDK (likely Edge environment issue). Falling back to mock.");
+            console.warn("Could not load Stripe SDK. Falling back to mock.");
             return c.json({ clientSecret: "mock_secret_" + Date.now(), mock: true });
         }
 
         const stripe = new Stripe(apiKey, {
             apiVersion: "2025-12-15.clover",
-            httpClient: Stripe.createFetchHttpClient(), // Important for Edge/Workers
+            httpClient: Stripe.createFetchHttpClient(),
         });
 
+        // Ensure metadata values are strings and within limits (500 chars)
+        const safeMetadata: any = {};
+        if (metadata.email) safeMetadata.email = String(metadata.email).slice(0, 500);
+        if (metadata.orderId) safeMetadata.orderId = String(metadata.orderId);
+        if (metadata.firstName) safeMetadata.firstName = String(metadata.firstName).slice(0, 500);
+        if (metadata.lastName) safeMetadata.lastName = String(metadata.lastName).slice(0, 500);
+        if (metadata.items) safeMetadata.items = String(metadata.items).slice(0, 500); // Json string
+
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: Math.round(amount * 100),
+            amount: Math.round(Number(amount) * 100),
             currency,
             automatic_payment_methods: { enabled: true },
+            metadata: safeMetadata
         });
 
         return c.json({ clientSecret: paymentIntent.client_secret });

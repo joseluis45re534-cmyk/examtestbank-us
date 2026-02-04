@@ -149,6 +149,14 @@ export default function ProductDetail({ params }: { params: { slug: string } }) 
                   </Button>
                 </div>
 
+                <div className="flex justify-center mt-6">
+                  <img
+                    src="https://dentaledu.pro/assets/payment-badge-custom.png"
+                    alt="Secure Payments"
+                    className="h-8 w-auto opacity-90"
+                  />
+                </div>
+
                 <p className="text-center text-xs text-muted-foreground mt-4 flex items-center justify-center gap-1">
                   <AlertCircle className="w-3 h-3" />
                   Files are emailed immediately after purchase.

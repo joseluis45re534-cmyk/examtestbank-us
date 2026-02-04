@@ -16,10 +16,13 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Helping students ace their exams with premium study materials since 2023. Instant downloads, verified content.
             </p>
-            <div className="flex items-center space-x-4 text-muted-foreground">
-              <ShieldCheck className="h-5 w-5" />
-              <Lock className="h-5 w-5" />
-              <span className="text-xs">SSL Secure Payment</span>
+            <div className="flex items-center space-x-4 text-muted-foreground mt-4">
+              <img
+                src="https://dentaledu.pro/assets/payment-badge-custom.png"
+                alt="Secure Payment Methods: Visa, Mastercard, Amex, Discover"
+                className="h-8 md:h-10 w-auto object-contain"
+              />
+              {/* <span className="text-xs">SSL Secure Payment</span> */}
             </div>
           </div>
 
